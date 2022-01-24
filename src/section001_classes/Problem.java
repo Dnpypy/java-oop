@@ -24,6 +24,4 @@ public class Problem {
         }
         return Arrays.copyOf(result, count);
     }
-
-
 }
