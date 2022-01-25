@@ -1,5 +1,7 @@
 package section001_classes;
 
 public class DynaArray {
-        //....2
+        int[] result;
+
+        int count;
 }
