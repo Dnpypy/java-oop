@@ -1,4 +1,6 @@
-package section001_classes;
+package home_section001_classes;
+
+import section001_classes.DynaArray;
 
 /**
  * boolean aBoolean = false;
@@ -12,6 +14,10 @@ package section001_classes;
  * String string = null;
  * int[] array = null;
  * DynaArray dynaArray = null;
+ */
+
+/**
+ * вывезти значения по-умолчанию полей переменных класса и локальные переменные метода main
  */
 public class HomeDefaultValues {
     boolean aBoolean;
