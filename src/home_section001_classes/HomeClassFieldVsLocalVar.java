@@ -6,6 +6,7 @@ import section001_classes.DynaArray;
 
 /**
  * Вывезти значения по-умолчанию полей переменных класса и локальные переменные метода main
+ * Удалить решение
  */
 public class HomeClassFieldVsLocalVar {
     boolean aBoolean;

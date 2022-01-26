@@ -13,16 +13,16 @@ public class Solution {
     }
 
     private static DynaArray getPositiveNumbers(int[] array) {
-        int[] newArr = new int[array.length];
+        int[] result = new int[array.length];
         var n1 = 0;
         for (Integer i : array) {
             if(i > 0) {
-                newArr[n1] = i;
+                result[n1] = i;
                 n1++;
             }
         }
         DynaArray dynaArray = new DynaArray();
-        dynaArray.result = newArr;
+        dynaArray.result = result;
         dynaArray.count = n1;
         return dynaArray;
     }
