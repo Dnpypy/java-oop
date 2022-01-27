@@ -9,16 +9,13 @@ import java.util.Arrays;
  * Удалить решение
  */
 public class HomeSetClassFieldValues {
-    int primitive = 54;
+    int primitive;
 
-    int[] array1 = new int[5];
+    int[] array1;
 
-    String[] array2 = new String[12];
+    String[] array2;
 
     public static void main(String[] args) {
-        HomeSetClassFieldValues fieldVsLocalVar = new HomeSetClassFieldValues();
-        System.out.println(fieldVsLocalVar.primitive);
-        System.out.println(Arrays.toString(fieldVsLocalVar.array1));
-        System.out.println(Arrays.toString(fieldVsLocalVar.array2));
+
     }
 }
