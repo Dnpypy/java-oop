@@ -5,7 +5,7 @@ public class DynaArrayVer3 {
 
     int count;
 
-    void add(int value) {
+    public void add(int value) {
         if (count == result.length) {
             int[] newArray = new int[result.length * 2];
             System.arraycopy(result, 0, newArray, 0, result.length);
