@@ -22,14 +22,5 @@ public class HomeFunctionOrMethod {
         value = 87;
     }
 
-    public static void main(String[] args) {
-        HomeFunctionOrMethod hm = new HomeFunctionOrMethod();
-        System.out.println(hm.value);
-        hm.changeValue();
-        System.out.println(hm.value);
-        hm.changeValueOp();
-        System.out.println(hm.value);
-        hm.changeValueVal();
-        System.out.println(hm.value);
-    }
+
 }
