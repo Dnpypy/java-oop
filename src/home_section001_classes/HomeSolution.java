@@ -11,11 +11,26 @@ public class HomeSolution {
     public static void main(String[] args) {
         int[] array = {1, -2, -3, 4, -5};
 
-        //..
+        HomeMinusArray hma = getNegativeNumbers(array);
 
-        //..
+        for (int i = 0; i < hma.count; i++) {
+            System.out.print(hma.result[i] + " ");
+        }
     }
-     //..4
 
+    private static HomeMinusArray getNegativeNumbers(int[] array) {
+        int[] tempArr = new int[array.length];
+        var count = 0;
+        for (int j : array) {
+            if (j < 0) {
+                tempArr[count] = j;
+                count++;
+            }
+        }
+        HomeMinusArray temp = new HomeMinusArray();
+        temp.result = tempArr;
+        temp.count = count;
+        return temp;
+    }
 
 }
