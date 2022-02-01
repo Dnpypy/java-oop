@@ -1,10 +1,8 @@
-package section001_classes;
-
-import home_section001_classes.HomeDynaArrayVer2;
+package home_section001_classes;
 
 import java.util.Arrays;
-//101
-public class DynaArrayVer4 {
+// Задача 103
+public class HomeDynaArrayAsString {
     int[] result = new int[5];
 
     int count;
@@ -26,5 +24,22 @@ public class DynaArrayVer4 {
         return Arrays.copyOf(result, count);
     }
 
-
+    String asString(int[] array) {
+        StringBuilder as = new StringBuilder();
+        if(array.length == 0) {
+            as = new StringBuilder("[" +  "]");
+            return as.toString();
+        }
+        as.append("[");
+        for (int i = 0; i < array.length; i++) {
+            var j = array[i];
+            if(i == array.length - 1) {
+                as.append(Integer.toString(j));
+            } else {
+                as.append(Integer.toString(j)).append(",");
+            }
+        }
+        as.append("]");
+        return as.toString();
+    }
 }

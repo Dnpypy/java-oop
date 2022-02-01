@@ -22,5 +22,17 @@ public class HomeFunctionOrMethod {
         value = 87;
     }
 
+    public static void main(String[] args) {
+        HomeFunctionOrMethod hmf = new HomeFunctionOrMethod();
+        System.out.println(hmf.value);
+        hmf.changeValue();
+        System.out.println(hmf.value);
+        hmf.changeValueOp();
+        System.out.println(hmf.value);
+        hmf.changeValueVal();
+        System.out.println(hmf.value);
 
+        hmf.value = 177;
+        System.out.println(hmf.value);
+    }
 }
