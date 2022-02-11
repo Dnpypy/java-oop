@@ -3,8 +3,10 @@ package home_section001_classes;
 import section001_classes.DynaArrayVer2;
 
 /**
- * Создать класс HomeDynaArrayVer2 в этом же пакете home_section001_classes, в нем объявить одно поле int[] массив и задать размер 5 и одно поле переменную int
- * Создать в классе HomeSolutionVer2 объект класса HomeDynaArrayVer2 и этому объекту присвоить ссылку на метод getPositiveNumbers(array);
+ * Создать класс HomeDynaArrayVer2 в этом же пакете home_section001_classes, в нем объявить одно поле int[]
+ * массив и задать размер 5 и одно поле переменную int
+ * Создать в классе HomeSolutionVer2 объект класса HomeDynaArrayVer2 и этому объекту присвоить ссылку на метод
+ * getPositiveNumbers(array);
  * Создание функции (add) добавления элемента в динамический массив
  * Удалить решение
  */
