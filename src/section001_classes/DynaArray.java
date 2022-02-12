@@ -1,5 +1,7 @@
 package section001_classes;
 
+import java.util.Arrays;
+
 public class DynaArray {
         int[] result;
 
@@ -12,5 +14,20 @@ public class DynaArray {
                         result = newArray;
                 }
                 result[count++] = value;
+        }
+
+        int[] toArray() {
+                return Arrays.copyOf(result, count);
+        }
+
+        String asString() {
+                final StringBuilder stringBuilder = new StringBuilder().append('[');
+                for (int i = 0; i < count; i++) {
+                        stringBuilder.append(result[i]);
+                        if (i < count - 1) {
+                                stringBuilder.append(',').append(' ');
+                        }
+                }
+                return stringBuilder.append(']').toString();
         }
 }

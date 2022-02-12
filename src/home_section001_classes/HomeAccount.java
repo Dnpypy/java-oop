@@ -11,11 +11,5 @@ package home_section001_classes;
  * Удалить решение
  */
 public class HomeAccount {
-    String name;
-    String address;
-    double balance;
 
-    void display() {
-        System.out.println(name + " " + address + " имеет на счету " + balance + " $ баланс");
-    }
 }
