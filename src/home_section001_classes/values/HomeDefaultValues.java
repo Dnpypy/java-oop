@@ -35,14 +35,6 @@ public class HomeDefaultValues {
 
     public static void main(String[] args) {
         //вывезти значения по умолчанию полей класса DefaultValues
-        HomeClassFieldVsLocalVar fieldVsLocalVar = new HomeClassFieldVsLocalVar();
-        System.out.println(fieldVsLocalVar.aBoolean);
-        System.out.println(fieldVsLocalVar.aByte);
-        System.out.println(fieldVsLocalVar.aShort);
-        System.out.println(fieldVsLocalVar.anInt);
-        System.out.println(fieldVsLocalVar.aChar);
-        System.out.println(fieldVsLocalVar.string);
-        System.out.println(fieldVsLocalVar.array);
-        System.out.println(fieldVsLocalVar.dynaArray);
+
     }
 }

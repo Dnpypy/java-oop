@@ -9,11 +9,12 @@ import java.util.Arrays;
  * Удалить решение
  */
 public class HomeSetClassFieldValues {
-    int primitive = 78;
+    // объявили ссылки
+    int primitive;
 
-    int[] array1 = {1, 2, 3};
+    int[] array1;
 
-    String[] array2 = {"!2", "233", "444"};
+    String[] array2;
 
     public static void main(String[] args) {
 

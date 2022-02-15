@@ -1,0 +1,42 @@
+# 2 класса решение
+package home_section001_classes.pack;
+
+import home_section001_classes.dyna_array.HomeDynaArrayVer2;
+import section001_classes.DynaArray;
+import section001_classes.package1.Class1;
+
+public class PackageTest {
+    public static void main(String[] args) {
+        HomeDynaArrayVer2 hda2 = new HomeDynaArrayVer2();
+        System.out.println(hda2);
+
+        DynaArray scd = new DynaArray();
+        System.out.println(scd);
+
+        Class1 cls1 = new Class1();
+        System.out.println(cls1);
+
+        Class1 cls2 = new Class1();
+        System.out.println(cls2);
+
+        //Example exp1 = new Example();
+    }
+}
+
+package home_section001_classes.pack;
+
+/**
+ * Создать класс PackageTest в пакете pack
+ * В классе PackageTest:
+ * Прописать путь до класса HomeDynaArrayVer2, создать объект этого класса..
+ * Прописать полный/абсолютный путь до класса DynaArray, создать объект этого класса.
+ * Прописать полный/абсолютный путь до класса Class1 в пакете package1, создать объект этого класса.
+ * Прописать полный/абсолютный путь до класса Class2 в пакете package2, создать объект этого класса.
+ * !Создать любой класс в пакете по умолчанию и прописать до него путь в классе PackageTest, создать объект этого класса.
+ *
+ * Все те же задания только использовать не полный/абсолютный путь, а import, создать объекты этих классов.
+ * Если импорт не понятен, тема #121 import
+ */
+
+public class HomeSolutionVer6 {
+}

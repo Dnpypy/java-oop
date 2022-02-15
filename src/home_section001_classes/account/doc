@@ -1,3 +1,17 @@
+#решение 2 класса
+
+package home_section001_classes.account;
+
+public class HomeAccount {
+    String name;
+    String address;
+    double balance;
+
+    void display() {
+        System.out.println(name + " " + address + " имеет на счету: " + balance + " баланс");
+    }
+}
+
 package home_section001_classes.account;
 
 public class HomeUseAccount {
