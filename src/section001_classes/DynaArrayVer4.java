@@ -1,7 +1,5 @@
 package section001_classes;
 
-import home_section001_classes.HomeDynaArrayVer2;
-
 import java.util.Arrays;
 //101
 public class DynaArrayVer4 {

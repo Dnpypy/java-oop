@@ -1,4 +1,4 @@
-package home_section001_classes;
+package home_section001_classes.dyna_array;
 
 public class HomeDynaArrayVer3 {
     int[] result = new int[5];

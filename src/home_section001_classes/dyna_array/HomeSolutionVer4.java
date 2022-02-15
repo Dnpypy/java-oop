@@ -1,8 +1,8 @@
-package home_section001_classes;
+package home_section001_classes.dyna_array;
 
 /**
  * **
- * Все классы в этом задании создаются в пакете home_section001_classes
+ * Все классы в этом задании создаются в пакете dyna_array
  *
  * Создать класс HomeDynaArrayVer4 там создать пустой массив int[] размерностью 5 и объявить int переменную
  * В классе HomeDynaArrayVer4 написать метод add, которая динамически расширяет наш динамический массив при увеличение элементов

@@ -1,4 +1,4 @@
-package home_section001_classes;
+package home_section001_classes.account;
 
 public class HomeUseAccount {
 

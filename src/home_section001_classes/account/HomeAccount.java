@@ -1,4 +1,4 @@
-package home_section001_classes;
+package home_section001_classes.account;
 
 /**
  * Создать класс HomeUseAccount, в нем создать точку входа метод main
