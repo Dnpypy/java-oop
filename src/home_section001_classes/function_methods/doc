@@ -1,11 +1,51 @@
+2 класса, решение
+
+package home_section001_classes.function_methods;
+
+
+/**
+ * lesson 98
+ * Поменять состояние объекта класса HomeFunctionOrMethod
+ * Поменять значение поля value на 67 или на любой другой число
+ * Удалить решение
+ */
+public class HomeFunctionOrMethod {
+    int value;
+
+    void changeValue() {
+        value = 67;
+    }
+
+    void changeValueOp() {
+        value = 77;
+    }
+
+    void changeValueVal() {
+        value = 87;
+    }
+
+    public static void main(String[] args) {
+        HomeFunctionOrMethod hmf = new HomeFunctionOrMethod();
+        hmf.value = 12;
+        System.out.println(hmf.value);
+
+        hmf.changeValue();
+        System.out.println(hmf.value);
+
+        hmf.changeValueOp();
+        System.out.println(hmf.value);
+
+        hmf.changeValueVal();
+        System.out.println(hmf.value);
+    }
+}
+
 package home_section001_classes.function_methods;
 
 import java.util.Arrays;
 
 /**
  *  копирования элементов из одного массива в другой.
- *   // 1 вариант [1, 2, 3, 0, 0, 0]
- *         // 2 вариант [2, 3, 0, 0, 0, 0]
  *  Метод System.arraycopy() принимает несколько параметров.
  * Первым параметром является массив-источник.
  * Вторым параметром является позиция начала нового массива.
@@ -30,10 +70,10 @@ public class HomeArrayCopy {
         int[] bbb = {1, 2, 3};
         int[] arr = new int[bbb.length * 2]; // размер массива
 
-
+        System.arraycopy(bbb, 1, arr, 0, 2);
         System.out.println(Arrays.toString(arr));
-        // 1 вариант [1, 2, 3, 0, 0, 0]
-        // 2 вариант [2, 3, 0, 0, 0, 0]
+        //Результат должен получится[1, 2, 3, 0, 0, 0]
+        // Как вариант [2, 3, 0, 0, 0, 0]
 
     }
 }
