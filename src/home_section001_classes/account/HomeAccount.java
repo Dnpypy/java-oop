@@ -8,14 +8,10 @@ package home_section001_classes.account;
  * имя адрес имеет на счету баланс $ баланс
  * В классе HomeUseAccount вывести информацию через метод display() по такому шаблону:
  * имя адрес имеет на счету $ баланс
+ * Добавить в класс HomeAccount метод getInterest вычисляющий процентную ставку
+ * Сократить значение до двух знаков после запятой
  * Удалить решение
  */
 public class HomeAccount {
-    String name;
-    String address;
-    double balance;
 
-    void display() {
-        System.out.println(name + " " + address + " имеет на счету: " + balance + " баланс");
-    }
 }

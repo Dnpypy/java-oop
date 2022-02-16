@@ -1,25 +1,35 @@
 # 2 класса решение
 package home_section001_classes.pack;
 
+
 import home_section001_classes.dyna_array.HomeDynaArrayVer2;
 import section001_classes.DynaArray;
 import section001_classes.package1.Class1;
+//import section001_classes.package2.Class1;
+
+import java.util.Arrays;
+import java.util.BitSet;
 
 public class PackageTest {
     public static void main(String[] args) {
-        HomeDynaArrayVer2 hda2 = new HomeDynaArrayVer2();
-        System.out.println(hda2);
 
-        DynaArray scd = new DynaArray();
-        System.out.println(scd);
+        HomeDynaArrayVer2 hmdv2 = new HomeDynaArrayVer2();
+        System.out.println(hmdv2);
+
+        DynaArray da = new DynaArray();
+        System.out.println(da);
 
         Class1 cls1 = new Class1();
         System.out.println(cls1);
 
-        Class1 cls2 = new Class1();
+        section001_classes.package2.Class1 cls2 = new section001_classes.package2.Class1();
         System.out.println(cls2);
 
-        //Example exp1 = new Example();
+        //Example ex = new Example();
+
+        //посл задание
+        Arrays.toString(new int[0]);
+        BitSet bitSet;
     }
 }
 

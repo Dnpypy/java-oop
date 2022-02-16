@@ -2,15 +2,33 @@
 
 package home_section001_classes.account;
 
+/**
+ * Создать класс HomeUseAccount, в нем создать точку входа метод main
+ * В класс HomeAccount создать поля name; address;double balance;
+ * В классе HomeUseAccount создать два объекта HomeAccount у каждого объекта свое имя, адрес, баланс
+ * добавить метод dipslay() который выводит данные по такому шаблону:
+ * имя адрес имеет на счету баланс $ баланс
+ * В классе HomeUseAccount вывести информацию через метод display() по такому шаблону:
+ * имя адрес имеет на счету $ баланс
+ * Добавить в класс HomeAccount метод getInterest вычисляющий процентную ставку
+ * Сократить значение до двух знаков после запятой
+ * Удалить решение
+ */
 public class HomeAccount {
     String name;
     String address;
     double balance;
 
     void display() {
-        System.out.println(name + " " + address + " имеет на счету: " + balance + " баланс");
+        System.out.print(name + " " + address + " имеет на счету: " + balance + " баланс");
     }
+
+    public double getInterest(double percentageRate) {
+        return balance * percentageRate / 100.00;
+    }
+
 }
+
 
 package home_section001_classes.account;
 
@@ -23,5 +41,24 @@ public class HomeUseAccount {
         account1.balance = 1234.55;
 
         account1.display();
+
+
+        System.out.print(", плюс $");
+        System.out.print(account1.getInterest(5.00));
+        System.out.println(" дохода ");
+
+        HomeAccount account2 = new HomeAccount();
+
+        account2.name = "Yas";
+        account2.address = "2000";
+        account2.balance = 1234.55;
+
+        account2.display();
+
+
+        System.out.print(", плюс $");
+        System.out.printf("%4.2f",account2.getInterest(15.00));
+        System.out.println(" дохода ");
+
     }
 }

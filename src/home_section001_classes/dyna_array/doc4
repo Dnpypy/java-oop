@@ -7,9 +7,7 @@ package home_section001_classes.dyna_array;
  * Создать класс HomeDynaArrayVer4 там создать пустой массив int[] размерностью 5 и объявить int переменную
  * В классе HomeDynaArrayVer4 написать метод add, которая динамически расширяет наш динамический массив при увеличение элементов
  * (Не забудь в методе add можно указывать без объекта поля, потомучто метод уже в классе)
- *
  * В классе HomeDynaArrayVer4 написать метод toArray(), который будет возвращать статический массив целого типа в количестве count
- *
  * Создать класс HomeDynaArrayTestVer4 в нем создать 2 объекта класса HomeDynaArrayVer4  dynaArraytest1, dynaArraytest2 класса HomeDynaArrayVer4
  * В первый объект ничего не добавлять, во второй через метод add добавить 5 разных чисел.
  * Отобразить первый и второй массивы объектов System.out.print("dynaArray1: "); System.out.print("dynaArray2: ");
@@ -19,4 +17,59 @@ package home_section001_classes.dyna_array;
  * Удалить решение
  */
 public class HomeSolutionVer4 {
+}
+
+package home_section001_classes.dyna_array;
+
+import java.util.Arrays;
+
+public class HomeDynaArrayVer4 {
+    private int[] dyna = new int[6];
+
+    private int num;
+
+    public int getNum() {
+        return num;
+    }
+
+    void add(int value) {
+        if(dyna.length == num) {
+            int[] tempAr = new int[dyna.length * 2];
+            System.arraycopy(dyna, 0, tempAr, 0, dyna.length);
+            dyna = tempAr;
+        }
+        dyna[num++] = value;
+    }
+
+    int[] toArray() {
+        return Arrays.copyOf(dyna, num);
+    }
+
+
+}
+
+package home_section001_classes.dyna_array;
+
+import home_section001_classes.dyna_array.HomeDynaArrayVer4;
+
+import java.util.Arrays;
+
+public class HomeDynaArrayTestVer4 {
+    public static void main(String[] args) {
+        HomeDynaArrayVer4 dynaArraytest1 = new HomeDynaArrayVer4();
+        System.out.print("dynaArray1: ");
+        System.out.println(Arrays.toString(dynaArraytest1.toArray()));
+        System.out.println(dynaArraytest1.num);
+
+        HomeDynaArrayVer4  dynaArraytest2 = new HomeDynaArrayVer4();
+        dynaArraytest2.add(0);
+        dynaArraytest2.add(1);
+        dynaArraytest2.add(2);
+        dynaArraytest2.add(3);
+        dynaArraytest2.add(4);
+        dynaArraytest2.add(5);
+        System.out.print("dynaArray2: ");
+        System.out.println(Arrays.toString(dynaArraytest2.toArray()));
+        System.out.println(dynaArraytest2.num);
+    }
 }
