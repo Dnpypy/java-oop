@@ -11,6 +11,7 @@ package home_section001_classes.account;
  * Добавить в класс HomeAccount метод getInterest вычисляющий процентную ставку balance * num/100.0
  * Сократить значение до двух знаков после запятой
  * Попробовать сделать поля класса HomeAccount приватными
+ * Создать геттер и получить доступ к ним.
  * Удалить решение
  */
 public class HomeAccount {
