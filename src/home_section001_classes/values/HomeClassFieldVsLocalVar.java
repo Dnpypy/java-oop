@@ -35,7 +35,30 @@ public class HomeClassFieldVsLocalVar {
         int[] array = null;
         DynaArray dynaArray = null;
 
+        HomeClassFieldVsLocalVar hf = new HomeClassFieldVsLocalVar();
+        System.out.println(hf.aBoolean);
+        System.out.println(hf.aByte);
+        System.out.println(hf.aShort);
+        System.out.println(hf.anInt);
+        System.out.println(hf.aLong);
+        System.out.println(hf.aFloat);
+        System.out.println(hf.aDouble);
+        System.out.println(hf.aChar);
+        System.out.println(hf.string);
+        System.out.println(Arrays.toString(hf.array));
+        System.out.println(hf.dynaArray);
 
+        System.out.println(aBoolean);
+        System.out.println(aByte);
+        System.out.println(aShort);
+        System.out.println(anInt);
+        System.out.println(aLong);
+        System.out.println(aFloat);
+        System.out.println(aDouble);
+        System.out.println(aChar);
+        System.out.println(string);
+        System.out.println(Arrays.toString(array));
+        System.out.println(dynaArray);
 
     }
 }

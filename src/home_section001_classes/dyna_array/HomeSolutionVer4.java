@@ -13,9 +13,10 @@ package home_section001_classes.dyna_array;
  * Создать класс HomeDynaArrayTestVer4 в нем создать 2 объекта класса HomeDynaArrayVer4  dynaArraytest1, dynaArraytest2 класса HomeDynaArrayVer4
  * В первый объект ничего не добавлять, во второй через метод add добавить 5 разных чисел.
  * Отобразить первый и второй массивы объектов System.out.print("dynaArray1: "); System.out.print("dynaArray2: ");
+ * Вывести int переменную поля тоже вместе с массивами.
  *
  * Прописать полям метод доступ private, и попробовать обратиться к этим полям
- * и написать геттер к полям и вызвать его (private #124)
+ * Написать геттер к полям и вызвать его (private #124)
  * Удалить решение
  */
 public class HomeSolutionVer4 {

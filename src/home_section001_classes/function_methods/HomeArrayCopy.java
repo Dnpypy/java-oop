@@ -28,9 +28,10 @@ public class HomeArrayCopy {
     public static void main(String[] args) {
 
         int[] bbb = {1, 2, 3};
-        int[] arr = new int[bbb.length * 2]; // размер массива
+        int[] arr = new int[bbb.length * 2]; // размер массива * 2
 
-
+        //System.arraycopy(bbb, 0, arr, 0, bbb.length);
+        System.arraycopy(bbb, 1, arr, 0, 2);
         System.out.println(Arrays.toString(arr));
         // 1 вариант [1, 2, 3, 0, 0, 0]
         // 2 вариант [2, 3, 0, 0, 0, 0]

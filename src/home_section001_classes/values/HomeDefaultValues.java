@@ -2,6 +2,8 @@ package home_section001_classes.values;
 
 import section001_classes.DynaArray;
 
+import java.util.Arrays;
+
 /**
  * boolean aBoolean = false;
  * byte aByte = 0;
@@ -35,6 +37,17 @@ public class HomeDefaultValues {
 
     public static void main(String[] args) {
         //вывезти значения по умолчанию полей класса DefaultValues
-
+        HomeDefaultValues hf = new HomeDefaultValues();
+        System.out.println(hf.aBoolean);
+        System.out.println(hf.aByte);
+        System.out.println(hf.aShort);
+        System.out.println(hf.anInt);
+        System.out.println(hf.aLong);
+        System.out.println(hf.aFloat);
+        System.out.println(hf.aDouble);
+        System.out.println(hf.aChar);
+        System.out.println(hf.string);
+        System.out.println(Arrays.toString(hf.array));
+        System.out.println(hf.dynaArray);
     }
 }

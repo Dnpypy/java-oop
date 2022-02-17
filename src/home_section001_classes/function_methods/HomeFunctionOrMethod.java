@@ -23,17 +23,6 @@ public class HomeFunctionOrMethod {
     }
 
     public static void main(String[] args) {
-        HomeFunctionOrMethod hmf = new HomeFunctionOrMethod();
-        hmf.value = 12;
-        System.out.println(hmf.value);
 
-        hmf.changeValue();
-        System.out.println(hmf.value);
-
-        hmf.changeValueOp();
-        System.out.println(hmf.value);
-
-        hmf.changeValueVal();
-        System.out.println(hmf.value);
     }
 }
