@@ -2,7 +2,7 @@ package home_section001_classes.pack;
 
 
 import home_section001_classes.dyna_array.HomeDynaArrayVer4;
-import section001_classes.DynaArray;
+import structures.DynaArray;
 import section001_classes.package1.Class1;
 
 import java.util.Arrays;

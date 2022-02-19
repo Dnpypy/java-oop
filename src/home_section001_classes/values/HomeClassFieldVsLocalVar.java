@@ -1,6 +1,6 @@
 package home_section001_classes.values;
 
-import section001_classes.DynaArray;
+import structures.DynaArray;
 
 import java.util.Arrays;
 

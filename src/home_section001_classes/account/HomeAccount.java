@@ -11,9 +11,42 @@ package home_section001_classes.account;
  * Добавить в класс HomeAccount метод getInterest вычисляющий процентную ставку balance * num/100.0
  * Сократить значение до двух знаков после запятой
  * Попробовать сделать поля класса HomeAccount приватными
- * Создать геттер и получить доступ к ним.
+ * Создать геттер и сеттер получить доступ к полям.
+ * Generate... или alt+insert создать геттеры, можно сразу к многим полям.
  * Удалить решение
  */
 public class HomeAccount {
+    private String name;
+    private String address;
+    private double balance;
 
+    void display() {
+        System.out.println(name + " " + address + " имеет на счету$ " + balance);
+    }
+
+    double getInterest(double percentageRate) {
+        return this.balance * percentageRate / 100.0;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setBalance(double bal) {
+        balance = bal;
+    }
 }

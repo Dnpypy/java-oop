@@ -7,13 +7,19 @@ package home_section001_classes.dyna_array;
  * Создать класс HomeDynaArrayVer4 там создать пустой массив int[] размерностью 5 и объявить int переменную
  * В классе HomeDynaArrayVer4 написать метод add, которая динамически расширяет наш динамический массив при увеличение элементов
  * (Не забудь в методе add можно указывать без объекта поля, потомучто метод уже в классе)
+ *
  * В классе HomeDynaArrayVer4 написать метод toArray(), который будет возвращать статический массив целого типа в количестве count
+ *
  * Создать класс HomeDynaArrayTestVer4 в нем создать 2 объекта класса HomeDynaArrayVer4  dynaArraytest1, dynaArraytest2 класса HomeDynaArrayVer4
  * В первый объект ничего не добавлять, во второй через метод add добавить 5 разных чисел.
  * Отобразить первый и второй массивы объектов System.out.print("dynaArray1: "); System.out.print("dynaArray2: ");
+ * Вывести int переменную поля тоже вместе с массивами.
  *
  * Прописать полям метод доступ private, и попробовать обратиться к этим полям
- * и написать геттер к полям и вызвать его (private #124)
+ * Написать геттер к полям и вызвать его (private #124)
+ *
+ * Перегрузка методов(#130) добавить два метода add, методы добавление статическ и динамичес массива
+ * в класс HomeDynaArrayVer4
  * Удалить решение
  */
 public class HomeSolutionVer4 {
@@ -40,6 +46,27 @@ public class HomeDynaArrayVer4 {
         }
         dyna[num++] = value;
     }
+
+        /**
+         * добавляет все элементы из статичиского массива
+         * @param array статичиского массив
+         */
+        public void add(int[] array) {
+                for (int value : array) {
+                        add(value);
+                }
+        }
+
+        /**
+         * добавляет все элементы из динамического массива
+         * @param dynaArray динамический массив
+         */
+        public void add(DynaArray dynaArray) {
+                for (int i = 0; i < dynaArray.count; i++) {
+                        add(dynaArray.result[i]);
+                }
+        }
+
 
     int[] toArray() {
         return Arrays.copyOf(dyna, num);
