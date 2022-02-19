@@ -25,7 +25,7 @@ public class DynaArray {
          */
         public void add(int[] array) {
                 for (int value : array) {
-                        add(value);
+                        add(value); // тут вызывается метод add целое число из этого же класса
                 }
         }
 
@@ -33,12 +33,16 @@ public class DynaArray {
          * добавляет все элементы из динамического массива
          * @param dynaArray динамический массив
          */
-        public void add(DynaArray dynaArray) {
+        public void add(DynaArray dynaArray) { // второй объект DynaArray, первый объект сам класс
                 for (int i = 0; i < dynaArray.count; i++) {
                         add(dynaArray.result[i]);
                 }
         }
 
+        /**
+         *
+         * @param value целое число
+         */
         public void add(int value) {
                 if (count == result.length) {
                         int[] newArray = new int[result.length * 2];

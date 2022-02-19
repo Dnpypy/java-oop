@@ -1,5 +1,7 @@
 package home_section001_classes.dyna_array;
 
+import structures.DynaArray;
+
 import java.util.Arrays;
 // Задача 103
 // Класс тест HomeDynaArrayAsStringTest
@@ -13,33 +15,35 @@ public class HomeDynaArrayAsString {
      * @param value число которое записываем в массив
      */
     void add(int value) {
-        if(result.length == count) {
-            int[] tempAr = new int[result.length * 2];
-            System.arraycopy(result, 0, tempAr, 0, result.length);
-            result = tempAr;
-        }
-        result[count++] = value;
-    }
 
+    }
+    /**
+     * добавляет все элементы из статичиского массива
+     * @param array статичиского массив
+     */
+//    public void add(int[] array) {
+//
+//    }
+
+    /**
+     * добавляет все элементы из динамического массива
+     * @param dynaArray динамический массив
+     */
+//    public void add(DynaArray dynaArray) {
+//
+//    }
     /**
      * Получает копию статического исходного массива основываясь на исходном массиве и на кол-ве элементов которыми он заполнен
      * @return будет возвращать статический массив целого типа в количестве count
      */
-    int[] toArray() {
-        return Arrays.copyOf(result, count);
-    }
+//    int[] toArray() {
+//
+//    }
 
     /**
      * @return строковое представления массива [....]
      */
-    String asString(){
-        StringBuilder sb = new StringBuilder().append("[");
-        for (int i = 0; i < count; i++) {
-            sb.append(result[i]);
-            if(i < count - 1) {
-                sb.append(", ");
-            }
-        }
-        return sb.append("]").toString();
-    }
+//    String asString(){
+//
+//    }
 }
