@@ -2,7 +2,7 @@ package home_section001_classes.dyna_array;
 
 
 /**
- * В классе HomeDynaArrayAsString прописать методы add(), toArray(), asString()
+ * В пакете dyna_array в классе HomeDynaArrayAsString прописать методы add(), toArray(), asString()
  * Прописать полям метод доступ private в классе HomeDynaArrayAsString, и попробовать обратиться к этим полям
  * Написать геттер к полям и вызвать его (private #124)
  *

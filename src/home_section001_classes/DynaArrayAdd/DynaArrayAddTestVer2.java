@@ -1,10 +1,8 @@
 package home_section001_classes.DynaArrayAdd;
 
-import structures.DynaArray;
-
-public class DynaArrayTest {
+public class DynaArrayAddTestVer2 {
     public static void main(String[] args) {
-        DynaArrayAdd dynaArray = new DynaArrayAdd();
+        DynaArrayAddVer2 dynaArray = new DynaArrayAddVer2();
 
         dynaArray.add(0);
         dynaArray.add(1);
@@ -15,7 +13,7 @@ public class DynaArrayTest {
 
         dynaArray.add(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1});
 
-        DynaArrayAdd dynaArray2 = new DynaArrayAdd();
+        DynaArrayAddVer2 dynaArray2 = new DynaArrayAddVer2();
         dynaArray2.add(new int[]{-9, -8, -7, -6, -5, -4, -3, -2, -1, 0});
         dynaArray.add(dynaArray2);
 
@@ -25,5 +23,6 @@ public class DynaArrayTest {
 
         // [0, 1, 2, 3, 4, 5, 9, 8, 7, 6, 5, 4, 3, 2, 1, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 99, 98, 97]
         System.out.println(dynaArray.asString());
+
     }
 }

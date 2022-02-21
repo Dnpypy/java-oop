@@ -1,0 +1,127 @@
+# 2 класса решение
+package home_section001_classes.DynaArrayAdd;
+
+import java.util.Arrays;
+
+/**
+ * #136
+ * Практика: Удаление дублирующего кода в методах
+ *  private void add(int[] array, int length) {
+ *  public void add(int value)
+ * private void grow(){ Создание приватной функции, которая увеличивает наш массив
+ *
+ *
+*/
+public class DynaArrayAddVer2 {
+
+        public int[] result = new int[5];
+
+        private int count;
+
+        public int getCount() {
+            return count;
+        }
+
+        public void setCount(int count) {
+            this.count = count;
+        }
+
+        /**
+         * добавляет все элементы из статичиского массива
+         *
+         * @param array статичиского массив
+         */
+        public void add(int[] array) {
+            add(array, array.length); // add(с 0 индекса, заканчивая ..length)
+        }
+
+        /**
+         * добавляет все элементы из динамического массива
+         *
+         * @param dynaArray динамический массив
+         */
+        public void add(DynaArrayAddVer2 dynaArray) {
+            add(dynaArray.result, dynaArray.count);
+        }
+
+        /**
+         *  private потомучто метод add будет использоваьтся в данном классе только
+         * @param array принмает массив
+         * @param length (длина массива) сколько кол-во элементов этого массива нужно скопировать начиная с 0 индекса
+         */
+        private void add(int[] array, int length) {
+            if (result.length - count < length) {
+                grow(count + length);
+            }
+            System.arraycopy(array, 0, result, count, length);
+            count += length;
+        }
+
+        /**
+         * @param value целое число
+         */
+        public void add(int value) {
+            if (count == result.length) {
+                grow(result.length * 2);
+            }
+            result[count++] = value;
+        }
+
+        /**
+         * приватная функция, которая прнимает длину массива и увеличивает наш массив
+         * @param length длину массива
+         */
+        private void grow(int length) {
+            int[] newArray = new int[length];
+            System.arraycopy(result, 0, newArray, 0, result.length);
+            result = newArray;
+        }
+
+        public int[] toArray() {
+            return Arrays.copyOf(result, count);
+        }
+
+        public String asString() {
+            final StringBuilder stringBuilder = new StringBuilder().append('[');
+            for (int i = 0; i < count; i++) {
+                stringBuilder.append(result[i]);
+                if (i < count - 1) {
+                    stringBuilder.append(',').append(' ');
+                }
+            }
+            return stringBuilder.append(']').toString();
+        }
+
+
+
+}
+
+
+package home_section001_classes.DynaArrayAdd;
+
+public class DynaArrayAddTestVer2 {
+    public static void main(String[] args) {
+        DynaArrayAddVer2 dynaArray = new DynaArrayAddVer2();
+
+        dynaArray.add(0);
+        dynaArray.add(1);
+        dynaArray.add(2);
+        dynaArray.add(3);
+        dynaArray.add(4);
+        dynaArray.add(5);
+
+        dynaArray.add(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1});
+
+        DynaArrayAddVer2 dynaArray2 = new DynaArrayAddVer2();
+        dynaArray2.add(new int[]{-9, -8, -7, -6, -5, -4, -3, -2, -1, 0});
+        dynaArray.add(dynaArray2);
+
+        dynaArray.add(99);
+        dynaArray.add(98);
+        dynaArray.add(97);
+
+        // [0, 1, 2, 3, 4, 5, 9, 8, 7, 6, 5, 4, 3, 2, 1, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 99, 98, 97]
+        System.out.println(dynaArray.asString());
+
+    }
+}

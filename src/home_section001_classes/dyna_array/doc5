@@ -42,7 +42,7 @@ public class HomeDynaArrayAsString {
     }
 
         /**
-         * добавляет все элементы из статичиского массива
+         * добавляет все элементы из статического массива
          * @param array статичиского массив
          */
         public void add(int[] array) {
