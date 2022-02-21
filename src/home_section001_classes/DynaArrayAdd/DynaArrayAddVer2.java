@@ -10,7 +10,7 @@ import java.util.Arrays;
  * private void grow(){ Создание приватной функции, которая увеличивает наш массив
  *
  *
-*/
+ */
 public class DynaArrayAddVer2 {
 
         public int[] result = new int[5];
@@ -50,7 +50,9 @@ public class DynaArrayAddVer2 {
          */
         private void add(int[] array, int length) {
             if (result.length - count < length) {
-                grow(count + length);
+                int[] newArray = new int[count + length];
+                System.arraycopy(result, 0, newArray, 0, result.length);
+                result = newArray;
             }
             System.arraycopy(array, 0, result, count, length);
             count += length;
@@ -61,20 +63,20 @@ public class DynaArrayAddVer2 {
          */
         public void add(int value) {
             if (count == result.length) {
-                grow(result.length * 2);
+                int[] newArray = new int[result.length * 2];
+                System.arraycopy(result, 0, newArray, 0, result.length);
+                result = newArray;
             }
             result[count++] = value;
         }
 
         /**
-         * приватная функция, которая прнимает длину массива и увеличивает наш массив
-         * @param newLength длину массива
+         * приватная функция, которая увеличивает наш массив
+         *
          */
-        private void grow(int newLength) {
-            int[] newArray = new int[newLength];
-            System.arraycopy(result, 0, newArray, 0, result.length);
-            result = newArray;
-        }
+//        private void grow() {
+//
+//        }
 
         public int[] toArray() {
             return Arrays.copyOf(result, count);
