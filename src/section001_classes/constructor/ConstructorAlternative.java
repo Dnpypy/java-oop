@@ -4,11 +4,11 @@ public class ConstructorAlternative {
     private int value;
 
     public ConstructorAlternative() {
-        //value = 23;
+        value = 23;
     }
 
     {
-        value = 78;
+        //value = 78;
     }
 
     public static void main(String[] args) {

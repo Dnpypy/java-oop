@@ -10,16 +10,13 @@ import java.util.Arrays;
  */
 public class HomeSetClassFieldValues {
     // объявили ссылки
-    int primitive = 5;
+    int primitive;
 
-    int[] array1 = new int[10];
+    int[] array;
 
-    String[] array2 = new String[3];
+    String[] array2;
 
     public static void main(String[] args) {
-        HomeSetClassFieldValues hSet = new HomeSetClassFieldValues();
-        System.out.println(hSet.primitive);
-        System.out.println(Arrays.toString(hSet.array1));
-        System.out.println(Arrays.toString(hSet.array2));
+
     }
 }
