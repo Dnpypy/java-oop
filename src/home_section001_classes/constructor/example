@@ -1,3 +1,4 @@
+2 часть решения 4-5 задание
 package home_section001_classes.constructor;
 
 import java.util.Arrays;
@@ -28,6 +29,23 @@ import java.util.Arrays;
  * 5. Прописать в конструкторе по умолчанию вызов конструктора из консруктора
  *   с помощью ключевого слова this и передать туда размер массива(№144 урок)
  */
-public class Constructor {
 
-}
+ public class Constructor {
+
+     private String[] words = new String[3];
+
+     private int value = 1100;
+
+     public Constructor() {
+         this(55);
+     }
+
+     public Constructor(int size) {
+         words = new String[size];
+     }
+
+     public static void main(String[] args) {
+         Constructor con = new Constructor();
+         System.out.println(Arrays.toString(con.words));
+     }
+ }
