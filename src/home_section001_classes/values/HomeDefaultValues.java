@@ -37,6 +37,17 @@ public class HomeDefaultValues {
 
     public static void main(String[] args) {
         //вывезти значения по умолчанию полей класса DefaultValues
-
+        HomeDefaultValues hm = new HomeDefaultValues();
+        System.out.println(hm.aBoolean);
+        System.out.println(hm.aByte);
+        System.out.println(hm.aShort);
+        System.out.println(hm.anInt);
+        System.out.println(hm.aLong);
+        System.out.println(hm.aFloat);
+        System.out.println(hm.aDouble);
+        System.out.println(hm.aChar);
+        System.out.println(hm.string);
+        System.out.println(Arrays.toString(hm.array));
+        System.out.println(hm.dynaArray);
     }
 }
