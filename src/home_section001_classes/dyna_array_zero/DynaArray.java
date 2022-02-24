@@ -1,7 +1,8 @@
 
 /**
  * 149
- *  Ошибка возникает изза этого result.length * 2 (если длина 0 *2 = 0)
+ *  Ошибка возникает изза этого result.length * 2 (если длина 0 *2 = 0)((150 урок объяснение)
+ *
  * Практика: Исправить ошибку в реализации класса DynaArray
  * В текущей реализации класса DynaArray есть ошибка:
  *
@@ -41,6 +42,14 @@ public class DynaArray {
         this(5);
     }
 
+    public int[] getResult() {
+        return result;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
     public DynaArray(int size) {
         result = new int[size];
     }
@@ -50,7 +59,10 @@ public class DynaArray {
      * @param value целое число
      */
     public void add(int value) {
-        //....
+        if(count == result.length) {
+            grow(result.length == 0 ? 5 : result.length * 2);
+        }
+        result[count] += value;
     }
 
     public void add(int[] array) {

@@ -1,26 +1,41 @@
-package home_section001_classes.DynaArrayAdd;
+package home_section001_classes.full_class_dyna_array;
 
 import java.util.Arrays;
 
 /**
- * #136
- * Практика: Удаление дублирующего кода в методах
- * private void add(int[] array, int length) {
- * public void add(int value)
- * private void grow(){ Создание приватной функции, которая увеличивает наш массив
+ * класс DynaArray без методов clear, remove, size, contans
  */
-public class DynaArrayAddVer2 {
+public class DynaArray {
 
-    public int[] result = new int[5];
+    /**
+     * поля
+     */
+    private int[] result;
 
     private int count;
+
+
+    /**
+     * геттеры
+     * @return массив
+     */
+    public int[] getResult() {
+        return result;
+    }
 
     public int getCount() {
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    /**
+     * конструкторы
+     */
+    public DynaArray() {
+        this(5);
+    }
+
+    public DynaArray(int size) {
+        result = new int[size];
     }
 
     /**
@@ -29,7 +44,8 @@ public class DynaArrayAddVer2 {
      * @param array статичиского массив
      */
     public void add(int[] array) {
-        add(array, array.length); // add(с 0 индекса, заканчивая ..length)
+        // add(с 0 индекса, заканчивая ..length)
+        add(array, array.length);
     }
 
     /**
@@ -37,22 +53,28 @@ public class DynaArrayAddVer2 {
      *
      * @param dynaArray динамический массив
      */
-    public void add(DynaArrayAddVer2 dynaArray) {
+    public void add(DynaArray dynaArray) { // второй объект DynaArrayAdd, первый объект сам класс
+        // дин массив класс DynaArrayAdd
+        //первый аргумент статич массив dynaArray.result
+        //второй аргумент кол-во элементов в этом массиве dynaArray.count
         add(dynaArray.result, dynaArray.count);
     }
 
     /**
-     * private потомучто метод add будет использоваьтся в данном классе только
-     *
-     * @param array  принмает массив
+     *  private потомучто метод add будет использоваьтся в данном классе только
+     * @param array принмает массив
      * @param length (длина массива) сколько кол-во элементов этого массива нужно скопировать начиная с 0 индекса
      */
-    private void add(int[] array, int length) {
+    private void add(int[] array, int length){
+        //result.length - count <--- это сколько свободных ячеек в статич массиве result
+        // если не моещается то расширяем
         if (result.length - count < length) {
             grow(count + length);
         }
+        //из array в result
+        //обновление длины массива
         System.arraycopy(array, 0, result, count, length);
-        count += length;
+        count += length; //обновление длины массива
     }
 
     /**
@@ -60,7 +82,7 @@ public class DynaArrayAddVer2 {
      */
     public void add(int value) {
         if (count == result.length) {
-            grow(result.length * 2);
+            grow(result.length == 0 ? 5 : result.length * 2);
         }
         result[count++] = value;
     }
@@ -88,6 +110,4 @@ public class DynaArrayAddVer2 {
         }
         return stringBuilder.append(']').toString();
     }
-
-
 }
