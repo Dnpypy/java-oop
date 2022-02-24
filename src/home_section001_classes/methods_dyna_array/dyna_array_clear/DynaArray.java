@@ -154,23 +154,10 @@ public class DynaArray {
         return stringBuilder.append(']').toString();
     }
 
-//    public void clear() {
-//        result = null;
-//    }
-
-//    public static void clear(int[] arr) {
-//        final int arrlen = arr.length;
-//        clear(arr, arrlen);
-//    }
-
+    /**
+     * Обнуление перем count результат []
+     */
     public void clear() {
-        //int count = 0;
-        //var length = 0;
-        int length = result.length;
-        while (result.length - count > length) {
-            System.arraycopy(result, 0, result, count, length);
-            count += length;
-        }
-        System.arraycopy(result, 0, result, count, result.length - count);
+        count = 0;
     }
 }

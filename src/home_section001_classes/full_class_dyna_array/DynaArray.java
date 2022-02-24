@@ -3,7 +3,7 @@ package home_section001_classes.full_class_dyna_array;
 import java.util.Arrays;
 
 /**
- * класс DynaArray без методов clear, remove, size, contains
+ * класс DynaArray без методов remove, size, contains
  */
 public class DynaArray {
 
@@ -120,5 +120,12 @@ public class DynaArray {
             }
         }
         return stringBuilder.append(']').toString();
+    }
+
+    /**
+     * Обнуление перем count
+     */
+    public void clear() {
+        count = 0;
     }
 }
