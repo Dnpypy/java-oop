@@ -1,4 +1,4 @@
-package home_section001_classes.pack;
+package home_section001_classes.pack_package;
 
 /**
  * Создать класс PackageTest в пакете pack

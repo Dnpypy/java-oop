@@ -1,5 +1,3 @@
-# 2 класса решение
-package home_section001_classes.dyna_array_zero;
 
 /**
  * 149
@@ -31,6 +29,7 @@ package home_section001_classes.dyna_array_zero;
  *
  * --------------------------------------------
  */
+package home_section001_classes.methods_dyna_array.dyna_array_zero;
 
 import java.util.Arrays;
 
@@ -43,15 +42,27 @@ public class DynaArray {
         this(5);
     }
 
+    public int[] getResult() {
+        return result;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
     public DynaArray(int size) {
         result = new int[size];
     }
 
+    /**
+     *
+     * @param value целое число
+     */
     public void add(int value) {
-        if (count == result.length) {
+        if(count == result.length) {
             grow(result.length == 0 ? 5 : result.length * 2);
         }
-        result[count++] = value;
+        result[count] += value;
     }
 
     public void add(int[] array) {
@@ -89,16 +100,5 @@ public class DynaArray {
             }
         }
         return stringBuilder.append(']').toString();
-    }
-}
-
-package home_section001_classes.dyna_array_zero;
-
-public class DynaArrayTest {
-    public static void main(String[] args) {
-        DynaArray dynaArray = new DynaArray(0);
-        dynaArray.add(0);
-
-        System.out.println();
     }
 }

@@ -1,6 +1,4 @@
-package home_section001_classes.dyna_array_zero;
-
-import java.util.Arrays;
+package home_section001_classes.methods_dyna_array.dyna_array_zero;
 
 public class DynaArrayTest {
     public static void main(String[] args) {

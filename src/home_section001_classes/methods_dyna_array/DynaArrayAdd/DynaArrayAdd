@@ -1,12 +1,12 @@
-package home_section001_classes.DynaArrayAdd;
+# 2 класса решение
+
+package home_section001_classes.methods_dyna_array.DynaArrayAdd.DynaArrayAdd;
 
 
 /**
  * #133
  * Практика: Оптимизация методов DynaArray.add
  * Необходимо оптимизировать код методов: add(int[] array) и add(DynaArray dynaArray).
- * И
- * Создать метод private void add(int[] array, int length) {
  *
  * Суть оптимизации в следующем: Если будет вызван один из данных методов
  * и передан статический или динамический массив, состоящий например из 75 элементов,
@@ -19,8 +19,15 @@ import java.util.Arrays;
 public class DynaArrayAdd {
     public int[] result = new int[5];
 
-    public int count;
+    private int count;
 
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     /**
      * добавляет все элементы из статичиского массива
@@ -28,8 +35,7 @@ public class DynaArrayAdd {
      * @param array статичиского массив
      */
     public void add(int[] array) {
-         // add(с 0 индекса, заканчивая ..length)
-        add(array, array.length);
+        add(array, array.length); // add(с 0 индекса, заканчивая ..length)
     }
 
     /**
@@ -49,18 +55,16 @@ public class DynaArrayAdd {
      * @param array принмает массив
      * @param length (длина массива) сколько кол-во элементов этого массива нужно скопировать начиная с 0 индекса
      */
-    private void add(int[] array, int length){
+    private void add(int[] array, int length) {
         //result.length - count <--- это сколько свободных ячеек в статич массиве result
         // если не моещается то расширяем
-            if (result.length - count < length) {
-                int[] newArray = new int[count + length];
-                System.arraycopy(result, 0, newArray, 0, result.length);
-                result = newArray;
-            }
-        //из array в result
-        //обновление длины массива
-            System.arraycopy(array, 0, result, count, length);//из array в result
-            count += length; //обновление длины массива
+        if (result.length - count < length) {
+            int[] newArray = new int[count + length];
+            System.arraycopy(result, 0, newArray, 0, result.length);
+            result = newArray;
+        }
+        System.arraycopy(array, 0, result, count, length);//из array в result
+        count += length; //обновление длины массива
     }
 
     /**
@@ -88,5 +92,35 @@ public class DynaArrayAdd {
             }
         }
         return stringBuilder.append(']').toString();
+    }
+}
+
+package home_section001_classes.methods_dyna_array.DynaArrayAdd.DynaArrayAdd;
+
+
+public class DynaArrayAddTest {
+    public static void main(String[] args) {
+        DynaArrayAdd dynaArray = new DynaArrayAdd();
+
+        dynaArray.add(0);
+        dynaArray.add(1);
+        dynaArray.add(2);
+        dynaArray.add(3);
+        dynaArray.add(4);
+        dynaArray.add(5);
+
+        dynaArray.add(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1});
+
+        DynaArrayAdd dynaArray2 = new DynaArrayAdd();
+        dynaArray2.add(new int[]{-9, -8, -7, -6, -5, -4, -3, -2, -1, 0});
+        dynaArray.add(dynaArray2);
+
+        dynaArray.add(99);
+        dynaArray.add(98);
+        dynaArray.add(97);
+
+        // [0, 1, 2, 3, 4, 5, 9, 8, 7, 6, 5, 4, 3, 2, 1, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 99, 98, 97]
+        System.out.println(dynaArray.asString());
+
     }
 }

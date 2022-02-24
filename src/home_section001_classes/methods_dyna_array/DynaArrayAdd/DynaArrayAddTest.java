@@ -1,5 +1,7 @@
-package home_section001_classes.DynaArrayAdd;
+package home_section001_classes.methods_dyna_array.DynaArrayAdd;
 
+
+import home_section001_classes.methods_dyna_array.DynaArrayAdd.DynaArrayAdd;
 
 public class DynaArrayAddTest {
     public static void main(String[] args) {

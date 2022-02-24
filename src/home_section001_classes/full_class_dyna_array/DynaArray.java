@@ -3,7 +3,7 @@ package home_section001_classes.full_class_dyna_array;
 import java.util.Arrays;
 
 /**
- * класс DynaArray без методов clear, remove, size, contans
+ * класс DynaArray без методов clear, remove, size, contains
  */
 public class DynaArray {
 
@@ -16,13 +16,16 @@ public class DynaArray {
 
 
     /**
-     * геттеры
+     * геттер
      * @return массив
      */
     public int[] getResult() {
         return result;
     }
-
+    /**
+     * геттер
+     * @return значение
+     */
     public int getCount() {
         return count;
     }
@@ -39,7 +42,7 @@ public class DynaArray {
     }
 
     /**
-     * добавляет все элементы из статичиского массива
+     * добавляет все элементы из статического массива
      *
      * @param array статичиского массив
      */
@@ -89,6 +92,7 @@ public class DynaArray {
 
     /**
      * приватная функция grow, которая увеличивает наш массив
+     * @param length длина значение
      */
     private void grow(int length) {
         int[] newArray = new int[length];
@@ -96,10 +100,17 @@ public class DynaArray {
         result = newArray;
     }
 
+    /**
+     * Получает копию статического исходного массива основываясь на исходном массиве и на кол-ве элементов которыми он заполнен
+     * @return будет возвращать статический массив целого типа в количестве count
+     */
     public int[] toArray() {
         return Arrays.copyOf(result, count);
     }
 
+    /**
+     * @return строковое представления массива [....]
+     */
     public String asString() {
         final StringBuilder stringBuilder = new StringBuilder().append('[');
         for (int i = 0; i < count; i++) {

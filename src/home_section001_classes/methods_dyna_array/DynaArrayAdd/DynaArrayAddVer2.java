@@ -1,4 +1,4 @@
-package home_section001_classes.DynaArrayAdd;
+package home_section001_classes.methods_dyna_array.DynaArrayAdd;
 
 import java.util.Arrays;
 

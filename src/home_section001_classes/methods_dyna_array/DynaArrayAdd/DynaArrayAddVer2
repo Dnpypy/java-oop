@@ -1,5 +1,5 @@
 # 2 класса решение
-package home_section001_classes.DynaArrayAdd;
+package home_section001_classes.methods_dyna_array.DynaArrayAdd.DynaArrayAdd;
 
 import java.util.Arrays;
 
@@ -97,7 +97,7 @@ public class DynaArrayAddVer2 {
 }
 
 
-package home_section001_classes.DynaArrayAdd;
+package home_section001_classes.methods_dyna_array.DynaArrayAdd.DynaArrayAdd;
 
 public class DynaArrayAddTestVer2 {
     public static void main(String[] args) {

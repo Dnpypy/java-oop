@@ -1,5 +1,5 @@
 # 2 класса решение
-package home_section001_classes.pack;
+package home_section001_classes.pack_package;
 
 
 import home_section001_classes.dyna_array.HomeDynaArrayVer2;
@@ -33,7 +33,7 @@ public class PackageTest {
     }
 }
 
-package home_section001_classes.pack;
+package home_section001_classes.pack_package;
 
 /**
  * Создать класс PackageTest в пакете pack
