@@ -60,6 +60,16 @@ public class DynaArrayTest {
         System.out.println(dynaArray3.size());
 
         // -------- contains -------------
+        System.out.println(dynaArray.onString(dynaArray.contains(0)));
+        System.out.println(dynaArray.onString(dynaArray.contains(2)));
+
+        System.out.println(dynaArray.onString(dynaArray.contains(100)));
+        System.out.println(dynaArray.onString(dynaArray.contains(-3)));
+
+        //-------- clear ------------
+        System.out.println(dynaArray.asString());
+        dynaArray.clear();
+        System.out.println(dynaArray.asString());
     }
 
 }

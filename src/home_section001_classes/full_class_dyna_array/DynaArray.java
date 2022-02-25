@@ -3,17 +3,27 @@ package home_section001_classes.full_class_dyna_array;
 import java.util.Arrays;
 
 /**
- * класс DynaArray без методов size, contains
+ * класс DynaArray
  */
 public class DynaArray {
 
     /**
      * поля
+     * result основной стат массив
+     * count перем счетчик от которой в основном зависит размер массива
+     * resultNum переменная целое число, нужна для метода contains и onString
      */
     private int[] result;
-
     private int count;
+    private int resultNum;
 
+    /**
+     * геттер
+     * @return целое число
+     */
+    public int getResultNum() {
+        return resultNum;
+    }
 
     /**
      * геттер
@@ -190,5 +200,39 @@ public class DynaArray {
      */
     public int size() {
         return count;
+    }
+
+    /**
+     * который возвращает true,
+     * если элемент присутствует в динамическом массиве, иначе - false!
+     * resultNum приватное поле! в которое передается элемент который ищем
+     *
+     * @param value элемент
+     * @return true of false
+     */
+    public boolean contains(int value) {
+        var bool = false;
+        for (int i = 0; i < count; i++) {
+            if (result[i] == value) {
+                bool = true;
+            }
+        }
+        resultNum = value;
+        return bool;
+        //return indexOf(value) != -1;
+    }
+
+    /**
+     * @param bool принимает булево значение
+     * @return строковое представление строки
+     */
+    public String onString(boolean bool) {
+        final StringBuilder stringBuilder = new StringBuilder();
+        if (bool) {
+            stringBuilder.append("true  - ").append(getResultNum()).append(" -  присутствует");
+        } else {
+            stringBuilder.append("false  - ").append(getResultNum()).append(" -  отсутствует");
+        }
+        return stringBuilder.append('!').toString();
     }
 }

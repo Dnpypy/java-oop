@@ -252,6 +252,7 @@ public class DynaArray {
         }
         resultNum = value;
         return bool;
+        //return indexOf(value) != -1;
     }
 
     /**
