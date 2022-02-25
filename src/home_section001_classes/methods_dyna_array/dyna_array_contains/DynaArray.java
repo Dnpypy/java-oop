@@ -1,29 +1,66 @@
-package home_section001_classes.full_class_dyna_array;
+package home_section001_classes.methods_dyna_array.dyna_array_contains;
 
 import java.util.Arrays;
 
 /**
- * класс DynaArray без методов size, contains
+ * 157
+ * Практика: Метод DynaArray.contains
+ * Необходимо реализовать метод boolean contains(int value), который возвращает true,
+ * если элемент присутствует в динамическом массиве, иначе - false!
+ * <p>
+ * Например, следующий код:
+ * <p>
+ * class DynaArrayTest {
+ * public static void main(String[] args) {
+ * DynaArray dynaArray = new DynaArray();
+ * dynaArray.add(0);
+ * dynaArray.add(1);
+ * dynaArray.add(2);
+ * dynaArray.add(3);
+ * <p>
+ * System.out.println(dynaArray.contains(0));
+ * System.out.println(dynaArray.contains(2));
+ * <p>
+ * System.out.println(dynaArray.contains(100));
+ * System.out.println(dynaArray.contains(-3));
+ * }
+ * }
+ * должен выдавать результат:
+ * <p>
+ * true     - 0 - присутствует!
+ * true     - 2 - присутствует!
+ * false    - 1000 - отсутствует!
+ * false    - -3 - отсутствует
  */
 public class DynaArray {
-
     /**
      * поля
      */
     private int[] result;
-
+    private int resultNum;
     private int count;
-
 
     /**
      * геттер
+     *
+     * @return целое число
+     */
+    public int getResultNum() {
+        return resultNum;
+    }
+
+    /**
+     * геттер
+     *
      * @return массив
      */
     public int[] getResult() {
         return result;
     }
+
     /**
      * геттер
+     *
      * @return значение
      */
     public int getCount() {
@@ -64,11 +101,12 @@ public class DynaArray {
     }
 
     /**
-     *  private потомучто метод add будет использоваьтся в данном классе только
-     * @param array принмает массив
+     * private потомучто метод add будет использоваьтся в данном классе только
+     *
+     * @param array  принмает массив
      * @param length (длина массива) сколько кол-во элементов этого массива нужно скопировать начиная с 0 индекса
      */
-    private void add(int[] array, int length){
+    private void add(int[] array, int length) {
         //result.length - count <--- это сколько свободных ячеек в статич массиве result
         // если не моещается то расширяем
         if (result.length - count < length) {
@@ -92,6 +130,7 @@ public class DynaArray {
 
     /**
      * приватная функция grow, которая увеличивает наш массив
+     *
      * @param length длина значение
      */
     private void grow(int length) {
@@ -102,6 +141,7 @@ public class DynaArray {
 
     /**
      * Получает копию статического исходного массива основываясь на исходном массиве и на кол-ве элементов которыми он заполнен
+     *
      * @return будет возвращать статический массив целого типа в количестве count
      */
     public int[] toArray() {
@@ -157,14 +197,18 @@ public class DynaArray {
      *
      * @param index принимает индекс элемента
      */
+    // [0,1,2,3,4]  Пример index = 0
     private void removeByIndex(int index) {
+        // 0 < 5 - 1
         if (index < count - 1) {
 //            for (int i = index; i < count - 1; i++) {
 //                result[i] = result[i + 1];
 //            }
+            // (0,1,2,3,4) , 0 + 1 позиция начала нового массива, (1,2,3,4) массив-назначения, 0 начальным положением целевого массива,
+            //это количество элементов, которые будут скопированы 5 - 1 - 0 = 4
             System.arraycopy(result, index + 1, result, index, count - 1 - index);
         }
-        count--;
+        count--; // с 5 до 4
     }
 
     /**
@@ -185,10 +229,42 @@ public class DynaArray {
     }
 
     /**
-     *
      * @return размер массива целое число
      */
     public int size() {
         return count;
+    }
+
+    /**
+     * который возвращает true,
+     * если элемент присутствует в динамическом массиве, иначе - false!
+     * resultNum приватное поле! в которое передается элемент который ищем
+     *
+     * @param value элемент
+     * @return true of false
+     */
+    public boolean contains(int value) {
+        var bool = false;
+        for (int i = 0; i < count; i++) {
+            if (result[i] == value) {
+                bool = true;
+            }
+        }
+        resultNum = value;
+        return bool;
+    }
+
+    /**
+     * @param bool принимает булево значение
+     * @return строковое представление строки
+     */
+    public String onString(boolean bool) {
+        final StringBuilder stringBuilder = new StringBuilder();
+        if (bool) {
+            stringBuilder.append("true  - ").append(getResultNum()).append(" -  присутствует");
+        } else {
+            stringBuilder.append("false  - ").append(getResultNum()).append(" -  отсутствует");
+        }
+        return stringBuilder.append('!').toString();
     }
 }

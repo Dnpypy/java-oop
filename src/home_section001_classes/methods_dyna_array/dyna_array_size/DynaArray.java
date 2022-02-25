@@ -1,12 +1,32 @@
-package home_section001_classes.full_class_dyna_array;
+package home_section001_classes.methods_dyna_array.dyna_array_size;
 
 import java.util.Arrays;
 
 /**
- * класс DynaArray без методов size, contains
+ * 155
+ * Практика: Метод DynaArray.size
+ * Необходимо реализовать метод size, который возвращает количество элементов в динамическом массиве.
+ *
+ *
+ *
+ * Например, следующий код:
+ *
+ * class DynaArrayTest {
+ *     public static void main(String[] args) {
+ *         DynaArray dynaArray = new DynaArray();
+ *         dynaArray.add(0);
+ *         dynaArray.add(1);
+ *         dynaArray.add(2);
+ *         dynaArray.add(3);
+ *
+ *         System.out.println(dynaArray.size());
+ *     }
+ * }
+ * должен выдавать результат:
+ *
+ * 4
  */
 public class DynaArray {
-
     /**
      * поля
      */
@@ -17,13 +37,16 @@ public class DynaArray {
 
     /**
      * геттер
+     *
      * @return массив
      */
     public int[] getResult() {
         return result;
     }
+
     /**
      * геттер
+     *
      * @return значение
      */
     public int getCount() {
@@ -64,11 +87,12 @@ public class DynaArray {
     }
 
     /**
-     *  private потомучто метод add будет использоваьтся в данном классе только
-     * @param array принмает массив
+     * private потомучто метод add будет использоваьтся в данном классе только
+     *
+     * @param array  принмает массив
      * @param length (длина массива) сколько кол-во элементов этого массива нужно скопировать начиная с 0 индекса
      */
-    private void add(int[] array, int length){
+    private void add(int[] array, int length) {
         //result.length - count <--- это сколько свободных ячеек в статич массиве result
         // если не моещается то расширяем
         if (result.length - count < length) {
@@ -92,6 +116,7 @@ public class DynaArray {
 
     /**
      * приватная функция grow, которая увеличивает наш массив
+     *
      * @param length длина значение
      */
     private void grow(int length) {
@@ -102,6 +127,7 @@ public class DynaArray {
 
     /**
      * Получает копию статического исходного массива основываясь на исходном массиве и на кол-ве элементов которыми он заполнен
+     *
      * @return будет возвращать статический массив целого типа в количестве count
      */
     public int[] toArray() {
@@ -157,14 +183,18 @@ public class DynaArray {
      *
      * @param index принимает индекс элемента
      */
+    // [0,1,2,3,4]  Пример index = 0
     private void removeByIndex(int index) {
+        // 0 < 5 - 1
         if (index < count - 1) {
 //            for (int i = index; i < count - 1; i++) {
 //                result[i] = result[i + 1];
 //            }
+            // (0,1,2,3,4) , 0 + 1 позиция начала нового массива, (1,2,3,4) массив-назначения, 0 начальным положением целевого массива,
+            //это количество элементов, которые будут скопированы 5 - 1 - 0 = 4
             System.arraycopy(result, index + 1, result, index, count - 1 - index);
         }
-        count--;
+        count--; // с 5 до 4
     }
 
     /**

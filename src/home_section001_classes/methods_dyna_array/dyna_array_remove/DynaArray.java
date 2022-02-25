@@ -181,16 +181,7 @@ public class DynaArray {
      * @param value целое число которое ищем
      * @return true или false
      */
-//    public boolean remove(int value) {
-//        var a = false;
-//        for (int i = 0; i < count; i++) {
-//            if(result[i] == value) {
-//                result[i] = 0;
-//                a = true;
-//            }
-//        }
-//        return a;
-//    }
+
     public boolean remove(int value) {
         // если элемент присутствует то переменная индекс будет хранить индекс элемента от 0 до значения count
         //если элемент отсутствует от индекс будет равен -1
@@ -204,20 +195,26 @@ public class DynaArray {
     }
 
     /**
+     * method remove -
+     * | - removeByIndex
      * При удалении посл элемента ничего делать не нужно,
      * но при удалении первого элемента, нужно все элементы сдвинуть на 1 индекс влево
      * Проверка как раз определяет нужно ли делать сдвигание или не нужно(Операция сдвига)
      *
      * @param index принимает индекс элемента
      */
+    // [0,1,2,3,4]  Пример index = 0
     private void removeByIndex(int index) {
+        // 0 < 5 - 1
         if (index < count - 1) {
 //            for (int i = index; i < count - 1; i++) {
 //                result[i] = result[i + 1];
 //            }
+            // (0,1,2,3,4) , 0 + 1 позиция начала нового массива, (1,2,3,4) массив-назначения, 0 начальным положением целевого массива,
+            //это количество элементов, которые будут скопированы 5 - 1 - 0 = 4
             System.arraycopy(result, index + 1, result, index, count - 1 - index);
         }
-        count--;
+        count--; // с 5 до 4
     }
 
     /**
