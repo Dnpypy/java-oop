@@ -1,0 +1,33 @@
+package academy.devonline.java.section001_classes.constructor;
+
+import java.util.Arrays;
+
+public class DynaArrayVer2Test {
+    public static void main(String[] args) {
+        DynaArrayVer2 dynaArray = new DynaArrayVer2();
+
+        dynaArray.add(0);
+        dynaArray.add(1);
+        dynaArray.add(2);
+        dynaArray.add(3);
+        dynaArray.add(4);
+        dynaArray.add(5);
+
+        dynaArray.add(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1});
+
+        DynaArrayVer2 dynaArray2 = new DynaArrayVer2();
+        dynaArray2.add(new int[]{-9, -8, -7, -6, -5, -4, -3, -2, -1, 0});
+        dynaArray.add(dynaArray2);
+
+        dynaArray.add(99);
+        dynaArray.add(98);
+        dynaArray.add(97);
+
+        // [0, 1, 2, 3, 4, 5, 9, 8, 7, 6, 5, 4, 3, 2, 1, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 99, 98, 97]
+        System.out.println(dynaArray.asString());
+
+        DynaArrayVer2 dynaArray3 = new DynaArrayVer2(15);
+        System.out.println(Arrays.toString(dynaArray3.getResult()));
+        System.out.println(dynaArray3.getCount());
+    }
+}

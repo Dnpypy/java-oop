@@ -1,0 +1,52 @@
+# 2 класса решение
+package academy.devonline.java.home_section001_classes.pack_package;
+
+
+import academy.devonline.java.home_section001_classes.dyna_array.HomeDynaArrayVer2;
+import academy.devonline.java.structures.DynaArray;
+import academy.devonline.java.section001_classes.package1.Class1;
+//import academy.devonline.java.section001_classes.package2.Class1;
+
+import java.util.Arrays;
+import java.util.BitSet;
+
+public class PackageTest {
+    public static void main(String[] args) {
+
+        HomeDynaArrayVer2 hmdv2 = new HomeDynaArrayVer2();
+        System.out.println(hmdv2);
+
+        DynaArray da = new DynaArray();
+        System.out.println(da);
+
+        Class1 cls1 = new Class1();
+        System.out.println(cls1);
+
+        academy.devonline.java.section001_classes.package2.Class1 cls2 = new academy.devonline.java.section001_classes.package2.Class1();
+        System.out.println(cls2);
+
+        //Example ex = new Example();
+
+        //посл задание
+        Arrays.toString(new int[0]);
+        BitSet bitSet;
+    }
+}
+
+package academy.devonline.java.home_section001_classes.pack_package;
+
+/**
+ * Создать класс PackageTest в пакете pack
+ * В классе PackageTest:
+ * Прописать путь до класса HomeDynaArrayVer2, создать объект этого класса..
+ * Прописать полный/абсолютный путь до класса DynaArray, создать объект этого класса.
+ * Прописать полный/абсолютный путь до класса Class1 в пакете package1, создать объект этого класса.
+ * Прописать полный/абсолютный путь до класса Class2 в пакете package2, создать объект этого класса.
+ * !Создать любой класс в пакете по умолчанию и прописать до него путь в классе PackageTest, создать объект этого класса.
+ *
+ * Все те же задания только использовать не полный/абсолютный путь, а import, создать объекты этих классов.
+ * Если импорт не понятен, тема #121 import
+ */
+
+public class HomeSolutionVer6 {
+}

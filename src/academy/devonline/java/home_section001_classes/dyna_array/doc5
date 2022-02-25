@@ -1,0 +1,118 @@
+# 1 описания задания , 2 класса решение
+package academy.devonline.java.home_section001_classes.dyna_array;
+
+
+/**
+ * В классе HomeDynaArrayAsString прописать методы add(), toArray(), asString()
+ * Прописать полям метод доступ private в классе HomeDynaArrayAsString, и попробовать обратиться к этим полям
+ * Написать геттер к полям и вызвать его (private #124)
+ *
+ * Перегрузка методов(#130) добавить два метода add, методы добавление статическ и динамичес массива
+ * в класс HomeDynaArrayAsString
+ *
+ * Создать класс HomeDynaArrayAsStringTest
+ * В нем создать точку входа, 3 объекта HomeDynaArrayAsString dynaAr1..2..3
+ * Впервый объект ничего не добавлять, во второй и третий 5 разных цифр
+ * Удалить решение
+ */
+public class HomeSolutionVer5 {
+}
+
+package academy.devonline.java.home_section001_classes.dyna_array;
+
+import java.util.Arrays;
+// Задача 103
+// Класс тест HomeDynaArrayAsStringTest
+public class HomeDynaArrayAsString {
+    int[] result = new int[5];
+
+    int count;
+
+    /**
+     * динамически расширяет динамический массив при увеличение элементов
+     * @param value число которое записываем в массив
+     */
+    void add(int value) {
+        if(result.length == count) {
+            int[] tempAr = new int[result.length * 2];
+            System.arraycopy(result, 0, tempAr, 0, result.length);
+            result = tempAr;
+        }
+        result[count++] = value;
+    }
+
+        /**
+         * добавляет все элементы из статического массива
+         * @param array статичиского массив
+         */
+        public void add(int[] array) {
+                for (int value : array) {
+                        add(value);
+                }
+        }
+
+        /**
+         * добавляет все элементы из динамического массива
+         * @param dynaArray динамический массив
+         */
+        public void add(DynaArray dynaArray) {
+                for (int i = 0; i < dynaArray.count; i++) {
+                        add(dynaArray.result[i]);
+                }
+        }
+
+    /**
+     * Получает копию статического исходного массива основываясь на исходном массиве и на кол-ве элементов которыми он заполнен
+     * @return будет возвращать статический массив целого типа в количестве count
+     */
+    int[] toArray() {
+        return Arrays.copyOf(result, count);
+    }
+
+    /**
+     * @return строковое представления массива [....]
+     */
+    String asString(){
+        StringBuilder sb = new StringBuilder().append("[");
+        for (int i = 0; i < count; i++) {
+            sb.append(result[i]);
+            if(i < count - 1) {
+                sb.append(", ");
+            }
+        }
+        return sb.append("]").toString();
+    }
+}
+
+
+package academy.devonline.java.home_section001_classes.dyna_array;
+
+import academy.devonline.java.home_section001_classes.dyna_array.HomeDynaArrayAsString;
+
+// Задача 103
+public class HomeDynaArrayAsStringTest {
+    public static void main(String[] args) {
+        DynaArray dynaArray = new DynaArray();
+                //добавление с целым аргументов
+                dynaArray.add(0);
+                dynaArray.add(1);
+                dynaArray.add(2);
+                dynaArray.add(3);
+                dynaArray.add(4);
+                dynaArray.add(5);
+
+                //статический массив
+                dynaArray.add(new int[]{2, 5});
+
+                //из друго дин массива dynaArray2
+                DynaArray dynaArray2 = new DynaArray();
+                dynaArray2.add(new int[]{-6, -7, -8});
+                dynaArray.add(dynaArray2);
+
+                //dynaArray.count = 20;
+
+                System.out.println(dynaArray.asString());
+
+
+    }
+}
