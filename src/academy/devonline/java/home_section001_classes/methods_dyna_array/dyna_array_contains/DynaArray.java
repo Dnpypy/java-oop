@@ -217,7 +217,7 @@ public class DynaArray {
      * метод приватный для внутренного использования, реализация обычный линейный поиск
      *
      * @param value целое число
-     *              return индекс элемента или -1
+     * @return индекс элемента или -1
      */
     private int indexOf(int value) {
         for (int i = 0; i < count; i++) {
@@ -244,15 +244,7 @@ public class DynaArray {
      * @return true of false
      */
     public boolean contains(int value) {
-        var bool = false;
-        for (int i = 0; i < count; i++) {
-            if (result[i] == value) {
-                bool = true;
-            }
-        }
-        resultNum = value;
-        return bool;
-        //return indexOf(value) != -1;
+        return indexOf(value) != -1;
     }
 
     /**
