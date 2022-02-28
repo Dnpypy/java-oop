@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section001_classes.methods;
+package academy.devonline.java.home_section001_classes.function_methods;
 
 /**
  * Задача реализовать метод indexOf
@@ -26,11 +26,11 @@ package academy.devonline.java.home_section001_classes.methods;
 public class MainIndexOf {
     public static void main(String[] args) {
         String[] arrWords = {"Hello", "World", "param", "return"};
-        System.out.println(indexOf(arrWords, "World"));
-        System.out.println(indexOf(arrWords, "dgdgdg"));
+        //System.out.println(indexOf(arrWords, "World"));
+        //System.out.println(indexOf(arrWords, "dgdgdg"));
 
         int[] numbers = {1, 2, 3, 4, 5, 6, 7};
-        System.out.println(indexOf(numbers, 3));
+       // System.out.println(indexOf(numbers, 3));
 
     }
 
@@ -39,26 +39,16 @@ public class MainIndexOf {
      * @param str   строковый тип
      * @return индекс элемента или -1
      */
-    private static int indexOf(String[] array, String str) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].equals(str)) {
-                return i;
-            }
-        }
-        return -1;
-    }
+    //private static int indexOf(String[] array, String str) {
+
+    //}
 
     /**
      * @param array int[] стат массив строкового типа
      * @param num   целое число
      * @return индекс элемента или -1
      */
-    private static int indexOf(int[] array, int num) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == (num)) {
-                return i;
-            }
-        }
-        return -1;
-    }
+    //private static int indexOf(int[] array, int num) {
+
+   // }
 }
