@@ -1,8 +1,5 @@
 package academy.devonline.java.home_section001_classes.dyna_array;
 
-
-
-
 import java.util.Arrays;
 
 // Задача 103

@@ -1,7 +1,7 @@
 package academy.devonline.java.home_section001_classes.pack_package;
 
 /**
- * Создать класс PackageTest в пакете pack
+ * Создать класс PackageTest в пакете pack_package
  * В классе PackageTest:
  * Прописать путь до класса HomeDynaArrayVer2, создать объект этого класса..
  * Прописать полный/абсолютный путь до класса DynaArray, создать объект этого класса.
