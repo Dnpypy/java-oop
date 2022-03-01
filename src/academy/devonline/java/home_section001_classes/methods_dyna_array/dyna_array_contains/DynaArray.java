@@ -244,7 +244,7 @@ public class DynaArray {
      * @return true of false
      */
     public boolean contains(int value) {
-        return indexOf(value) != -1;
+        return value != -1;
     }
 
     /**
