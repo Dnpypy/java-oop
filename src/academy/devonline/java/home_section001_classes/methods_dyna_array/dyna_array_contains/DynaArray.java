@@ -238,13 +238,21 @@ public class DynaArray {
     /**
      * который возвращает true,
      * если элемент присутствует в динамическом массиве, иначе - false!
-     * resultNum приватное поле! в которое передается элемент который ищем
+     * value приватное поле! в которое передается элемент который ищем
      *
      * @param value элемент
      * @return true of false
      */
     public boolean contains(int value) {
-        return value != -1;
+        var bool = false;
+        for (int i = 0; i < count; i++) {
+            if (result[i] == value) {
+                bool = true;
+            }
+        }
+        resultNum = value;
+        return bool;
+        //return value != -1;
     }
 
     /**

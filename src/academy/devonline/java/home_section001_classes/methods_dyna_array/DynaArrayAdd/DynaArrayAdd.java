@@ -7,7 +7,7 @@ package academy.devonline.java.home_section001_classes.methods_dyna_array.DynaAr
  * Необходимо оптимизировать код методов: add(int[] array) и add(DynaArray dynaArray).
  * И
  * Создать метод private void add(int[] array, int length) {
- *
+ * В перегруженных методах будет участвовать внутри приватный метод add(int[] array, int length)
  * Суть оптимизации в следующем: Если будет вызван один из данных методов
  * и передан статический или динамический массив, состоящий например из 75 элементов,
  * то в процессе добавления операция расширения массива с копированием (т.е. операция grow)
@@ -25,11 +25,11 @@ public class DynaArrayAdd {
     /**
      * добавляет все элементы из статичиского массива
      *
-     * @param array статичиского массив
+     * @param array статического массив
      */
     public void add(int[] array) {
          // add(с 0 индекса, заканчивая ..length)
-        add(array, array.length);
+        //.
     }
 
     /**
@@ -41,7 +41,7 @@ public class DynaArrayAdd {
             // дин массив класс DynaArrayAdd
         //первый аргумент статич массив dynaArray.result
         //второй аргумент кол-во элементов в этом массиве dynaArray.count
-        add(dynaArray.result, dynaArray.count);
+        //...
     }
 
     /**
@@ -52,15 +52,11 @@ public class DynaArrayAdd {
     private void add(int[] array, int length){
         //result.length - count <--- это сколько свободных ячеек в статич массиве result
         // если не моещается то расширяем
-            if (result.length - count < length) {
-                int[] newArray = new int[count + length];
-                System.arraycopy(result, 0, newArray, 0, result.length);
-                result = newArray;
-            }
+           //...
         //из array в result
         //обновление длины массива
-            System.arraycopy(array, 0, result, count, length);//из array в result
-            count += length; //обновление длины массива
+            //...//из array в result
+        //.. //обновление длины массива
     }
 
     /**
