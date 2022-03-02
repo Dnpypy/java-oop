@@ -14,21 +14,24 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.structures;
+package academy.devonline.java.section011_base_structures;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
+ *
+ * №177
+ * default класса - доступ из внутри этого же класса и другого любого класса в этом же пакете
+ * если класс не публичный нет смысла конструктору использовать public
  */
-public class LinkedListTest {
-    public static void main(String[] args) {
-        // создали объект нашего списка
-        LinkedList list = new LinkedList();
-        for (int i = 1; i <= 3; i++) {
-            list.add(i);
-        }
+class NotPublicClass {
 
-        System.out.println();
+    NotPublicClass() {
 
+    }
+
+    void test(){
+        NotPublicClass object = new NotPublicClass();
     }
 }

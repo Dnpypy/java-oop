@@ -17,7 +17,7 @@
 package academy.devonline.java.structures;
 
 /**
- * 176 Создание односвязного списка
+ * 176
  * @author devonline
  * @link http://devonline.academy/java
  *

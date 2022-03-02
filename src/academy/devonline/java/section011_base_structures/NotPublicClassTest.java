@@ -14,21 +14,17 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.structures;
+package academy.devonline.java.section011_base_structures;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
+ * №177
+ * public - из любой точки программы
  */
-public class LinkedListTest {
+public class NotPublicClassTest {
     public static void main(String[] args) {
-        // создали объект нашего списка
-        LinkedList list = new LinkedList();
-        for (int i = 1; i <= 3; i++) {
-            list.add(i);
-        }
-
-        System.out.println();
-
+        NotPublicClass object = new NotPublicClass();
     }
 }
