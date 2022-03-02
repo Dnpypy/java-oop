@@ -14,24 +14,26 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.structures;
+package academy.devonline.java.home_structures_chapter09;
+
+import java.util.Arrays;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class ItemVer2 {
-    //значение
-    int value;
+public class LinkedListTestVer2 {
+    public static void main(String[] args) {
+        // создали объект нашего списка
+        LinkedListVer2 list = new LinkedListVer2();
+        for(int i = 1; i <= 3; i++) {
+            list.add(i);
+        }
 
-    //ссылка на след элемент
-    //т.к. каждый элемент у нас представляется типом ItemVer2
-    ItemVer2 next;
-
-
-    // с помощью конструктора можно сразу задать значение
-    // public у конструктора не имеет смысла класс не публичный
-    ItemVer2(int value) {
-        this.value = value;
+        System.out.println(Arrays.toString(list.toArray()));
     }
+
+
+
+
 }

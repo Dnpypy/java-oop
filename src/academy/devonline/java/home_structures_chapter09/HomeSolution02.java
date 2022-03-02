@@ -14,24 +14,15 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.structures;
+package academy.devonline.java.home_structures_chapter09;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
+ * #180 Метод LinkedList.toArray Home
+ * В классе LinkedListVer2 написать метод toArray()
+ *
  */
-public class ItemVer2 {
-    //значение
-    int value;
-
-    //ссылка на след элемент
-    //т.к. каждый элемент у нас представляется типом ItemVer2
-    ItemVer2 next;
-
-
-    // с помощью конструктора можно сразу задать значение
-    // public у конструктора не имеет смысла класс не публичный
-    ItemVer2(int value) {
-        this.value = value;
-    }
+public class HomeSolution02 {
 }

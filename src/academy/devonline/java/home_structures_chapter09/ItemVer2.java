@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.structures;
+package academy.devonline.java.home_structures_chapter09;
 
 /**
  * @author devonline

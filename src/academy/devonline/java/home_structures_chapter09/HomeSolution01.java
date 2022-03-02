@@ -14,14 +14,14 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures;
+package academy.devonline.java.home_structures_chapter09;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  *
  * Создание односвязного списка  №176
- * Создать 3 класса Item, LinkedList, LinkedListTest
+ * Создать 3 класса Item, LinkedList, LinkedListTest в пакете academy.devonline.java.home_structures_chapter09
  * В классе Item прописать 2 поля значение, след элемент и метод конструтокра для значения
  * В классе LinkedList прописать 2 поля private, которые указывают на первый и последний элемент в списке
  * В нем же создать класс add с одним параметром значение целого числа
