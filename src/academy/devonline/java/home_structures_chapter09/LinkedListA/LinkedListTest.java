@@ -14,15 +14,25 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09;
+package academy.devonline.java.home_structures_chapter09.LinkedListA;
+
+
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  *
- * #180 Метод LinkedList.toArray Home
- * В классе LinkedListVer2 написать метод toArray()
- *
+ * Создание односвязного списка  №176 тест
  */
-public class HomeSolution02 {
+public class LinkedListTest {
+    public static void main(String[] args) {
+        // создали объект нашего списка
+        LinkedList list = new LinkedList();
+        for (int i = 1; i <= 3; i++) {
+            list.add(i);
+        }
+
+        System.out.println();
+    }
+
 }

@@ -14,26 +14,15 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09;
-
-import java.util.Arrays;
+package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
+ * #180 Метод LinkedList.toArray Home
+ * В классе LinkedListVer2 написать метод toArray()
+ *
  */
-public class LinkedListTestVer2 {
-    public static void main(String[] args) {
-        // создали объект нашего списка
-        LinkedListVer2 list = new LinkedListVer2();
-        for(int i = 1; i <= 3; i++) {
-            list.add(i);
-        }
-
-        System.out.println(Arrays.toString(list.toArray()));
-    }
-
-
-
-
+public class HomeSolution02 {
 }

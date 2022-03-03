@@ -4,7 +4,8 @@ package academy.devonline.java.home_section001_classes.pack_package;
  * Создать класс PackageTest в пакете pack_package
  * В классе PackageTest:
  * Прописать путь до класса HomeDynaArrayVer2, создать объект этого класса..
- * Прописать полный/абсолютный путь до класса DynaArray, создать объект этого класса.
+ * Прописать полный/абсолютный путь до класса DynaArray(full_class_dyna_array пакет),
+ * создать объект этого класса.
  * Прописать полный/абсолютный путь до класса Class1 в пакете package1, создать объект этого класса.
  * Прописать полный/абсолютный путь до класса Class2 в пакете package2, создать объект этого класса.
  * !Создать любой класс в пакете по умолчанию и прописать до него путь в классе PackageTest, создать объект этого класса.
@@ -13,6 +14,7 @@ package academy.devonline.java.home_section001_classes.pack_package;
  * Если импорт не понятен, тема #121 import
  *
  * Бонус: Оптимизировать импорт классов Arrays, BitSet, тема #123
+ * IDE code ->optimize import(ctrl+alt+o)
  */
 
 public class HomeSolutionVer6 {

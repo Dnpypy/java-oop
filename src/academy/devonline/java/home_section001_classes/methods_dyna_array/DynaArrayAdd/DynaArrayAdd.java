@@ -7,7 +7,7 @@ package academy.devonline.java.home_section001_classes.methods_dyna_array.DynaAr
  * Необходимо оптимизировать код методов: add(int[] array) и add(DynaArray dynaArray).
  * И
  * * Создать два перегруженных метода add
- *  * с параметрами стат массива int[] array и динам массива MethodOverloading dynaArray
+ *  * с параметрами стат массива int[] array и динам массива DynaArrayAdd dynaArray
  *  * В первом случае длина стат массива length
  *  * Во втором случает у объекта MethodOverloading длина массива выступает не length, а поле count
  *  И
@@ -34,7 +34,7 @@ public class DynaArrayAdd {
      */
     public void add(int[] array) {
          // add(с 0 индекса, заканчивая ..length)
-        //...
+        add(array, array.length);
     }
 
     /**
@@ -46,7 +46,7 @@ public class DynaArrayAdd {
             // дин массив класс DynaArrayAdd
         //первый аргумент статич массив dynaArray.result
         //второй аргумент кол-во элементов в этом массиве dynaArray.count
-       //..
+       add(dynaArray.result, dynaArray.count);
     }
 
     /**
@@ -57,10 +57,14 @@ public class DynaArrayAdd {
     private void add(int[] array, int length){
         //result.length - count <--- это сколько свободных ячеек в статич массиве result
         // если не помещается то расширяем
-       //....
+         if(result.length - count < length){
+             int[] tempAr = new int[count + length];
+             System.arraycopy(result, 0, tempAr, 0, result.length);
+             result = tempAr;
+         }
 
-        //...//из array в result
-       //....; //обновление длины массива
+        System.arraycopy(array, 0, result, count, length);//из array в result, у result не 0, а count
+        count += length; //обновление длины массива каждый раз сложение
     }
 
     /**

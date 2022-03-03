@@ -14,16 +14,15 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.structures;
+package academy.devonline.java.home_structures_chapter09.LinkedListA;
+
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  * <p>
- * класс публичный любой разработчик имеет доступ к этому классу
+ * Создание односвязного списка  №176
  */
-
-
 public class LinkedList {
     //У этого класса должно быть два поля, которые указывают на первый
     // элемент списка и на последний
@@ -33,21 +32,23 @@ public class LinkedList {
     /**
      * добавляет элемент в списки
      * т.к. метод add является методом класса LinkedList, то он имеет доступ к полям этого класса
+     *
      * @param value целое число
      */
-    public void add(int value) {
-        //создаю объект элемента списка
+    void add(int value) {
+        //создаю объект элемента списка типа Item с одним аргументом конструктора
         Item item = new Item(value);
         //тут нужна проверка если элементов нет в списке, т.е. список пустой
         //по умолчани. внутр поля класс инициализируются null(если ничего не записано в них), задачи в пакете values
+        // тут проверка первого элемента!
         if (first == null) {
             // операция присваивания является правосторонней справо на лево
             //сначала эта операция last = item, потом эта first = last
             first = last = item;
-        } else { // если в списке есть хотя бы один элемент, нам нужно обновить ссылку last
+        } else {
+            // если в списке есть хотя бы один элемент, нам нужно обновить ссылку last
             last.next = item;
             last = item;
         }
-
     }
 }

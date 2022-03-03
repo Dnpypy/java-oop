@@ -14,10 +14,9 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09;
+package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
 
 import academy.devonline.java.structures.DynaArray;
-import academy.devonline.java.structures.ItemVer2;
 
 /**
  * @author devonline
@@ -49,13 +48,13 @@ public class LinkedListVer2 {
      * @return int[] массив
      */
     public int[] toArray() {
-        //.. // создаю объект DynaArray
-         //..// текущий элемент односвяз списка присваиваем первому элементу (врем локал перем индикатор итерации)
-        //.. //цикл вайл пока текущ не равен нулл
-            //..// current.value -> запрос поля value (обновление индикатор итерации)
-            //.. // текущ присваиваю текущ некст
+        DynaArray dynaArray = new DynaArray(); // создаю объект DynaArray
+         ItemVer2 current = first;// текущий элемент односвяз списка присваиваем первому элементу (врем локал перем индикатор итерации)
+         while(current != null) { //цикл вайл пока текущ не равен нулл
+            dynaArray.add(current.value);// current.value -> запрос поля value (обновление индикатор итерации)
+            current = current.next; // текущ присваиваю текущ некст
         }
         // как только вышли из while нужно элементы из дин массива преобразовать в стат массив
-       // return //...;
+       return dynaArray.toArray();
     }
 }

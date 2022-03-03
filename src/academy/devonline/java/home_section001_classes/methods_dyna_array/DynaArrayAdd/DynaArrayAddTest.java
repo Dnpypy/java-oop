@@ -24,6 +24,10 @@ public class DynaArrayAddTest {
 
         // [0, 1, 2, 3, 4, 5, 9, 8, 7, 6, 5, 4, 3, 2, 1, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 99, 98, 97]
         System.out.println(dynaArray.asString());
+        System.out.println(dynaArray.count);
+
+        int[] arrN = {0, 1, 2, 3, 4, 5, 9, 8, 7, 6, 5, 4, 3, 2, 1, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 99, 98, 97};
+        System.out.println(arrN.length);
 
     }
 }

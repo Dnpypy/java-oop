@@ -14,24 +14,20 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09;
+package academy.devonline.java.home_structures_chapter09.LinkedListA;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class ItemVer2 {
-    //значение
+class Item {
+
     int value;
-
-    //ссылка на след элемент
-    //т.к. каждый элемент у нас представляется типом ItemVer2
-    ItemVer2 next;
-
+    Item next;
 
     // с помощью конструктора можно сразу задать значение
-    // public у конструктора не имеет смысла класс не публичный
-    ItemVer2(int value) {
+    // public не имеет смысла класс не публичный
+    Item(int value) {
         this.value = value;
     }
 }

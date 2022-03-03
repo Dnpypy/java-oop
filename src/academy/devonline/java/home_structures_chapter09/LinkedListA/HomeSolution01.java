@@ -14,16 +14,18 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09;
+package academy.devonline.java.home_structures_chapter09.LinkedListA;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  *
  * Создание односвязного списка  №176
- * Создать 3 класса Item, LinkedList, LinkedListTest в пакете academy.devonline.java.home_structures_chapter09
- * В классе Item прописать 2 поля значение, след элемент и метод конструтокра для значения
- * В классе LinkedList прописать 2 поля private, которые указывают на первый и последний элемент в списке
+ * Создать 2 класса Item(не публичный), LinkedList  в пакете academy.devonline.java.home_structures_chapter09
+ * LinkedListTest уже тест готов проверка там
+ * В классе Item прописать 2 поля: значение типа int, след элемент типа Item и метод конструтокра для значения с
+ * одним параметром
+ * В классе LinkedList прописать 2 поля private типа Item, которые указывают на первый и последний элемент в списке
  * В нем же создать класс add с одним параметром значение целого числа
  * В котором создаю объект Item и делаю проверку, если элемент в списке проверка на null,
  * если нет элемента в списке first last присваивается item,
