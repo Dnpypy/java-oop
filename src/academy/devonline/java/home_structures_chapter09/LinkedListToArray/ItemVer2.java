@@ -19,17 +19,19 @@ package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
+ * #180 Метод LinkedList.toArray Home
  */
 public class ItemVer2 {
-    //значение
+    //Значение
     int value;
 
-    //ссылка на след элемент
+    //объявляется ссылка, она введет на след элемент
     //т.к. каждый элемент у нас представляется типом ItemVer2
     ItemVer2 next;
 
 
-    // с помощью конструктора можно сразу задать значение
+    // С помощью конструктора можно сразу задать значение
     // public у конструктора не имеет смысла класс не публичный
     ItemVer2(int value) {
         this.value = value;

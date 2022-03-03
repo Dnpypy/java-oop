@@ -14,28 +14,27 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
-
-import java.util.Arrays;
+package academy.devonline.java.home_structures_chapter09.LinkedListAsString;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  *
- * #180 Метод LinkedList.toArray Home
+#182
+ * Практика: Метод LinkedList.asString
  */
-public class LinkedListTestVer2 {
-    public static void main(String[] args) {
-        // создали объект нашего списка
-        LinkedListVer2 list = new LinkedListVer2();
-        for(int i = 1; i <= 3; i++) {
-            list.add(i);
-        }
+public class ItemVer3 {
+    //Значение
+    int value;
 
-        System.out.println(Arrays.toString(list.toArray()));
+    //объявляется ссылка, она введет на след элемент
+    //т.к. каждый элемент у нас представляется типом ItemVer2
+    ItemVer3 next;
+
+
+    // С помощью конструктора можно сразу задать значение
+    // public у конструктора не имеет смысла класс не публичный
+    ItemVer3(int value) {
+        this.value = value;
     }
-
-
-
-
 }

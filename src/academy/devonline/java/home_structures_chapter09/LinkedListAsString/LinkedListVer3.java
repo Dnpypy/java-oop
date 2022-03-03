@@ -14,25 +14,23 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
-
-import academy.devonline.java.structures.DynaArray;
+package academy.devonline.java.home_structures_chapter09.LinkedListAsString;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  *
- * #180 Метод LinkedList.toArray
- * В классе LinkedListVer2 прописать метод toArray()
+ * #182
+ *  * Практика: Метод LinkedList.asString
  */
-public class LinkedListVer2 {
+public class LinkedListVer3 {
 
-    private ItemVer2 first;
+    private ItemVer3 first;
 
-    private ItemVer2 last;
+    private ItemVer3 last;
 
     public void add(int value) {
-        ItemVer2 item = new ItemVer2(value);
+        ItemVer3 item = new ItemVer3(value);
         if (first == null) {
             first = last = item;
         } else {
@@ -58,4 +56,26 @@ public class LinkedListVer2 {
         // как только вышли из while нужно элементы из дин массива преобразовать в стат массив
 
     }
+
+    /**
+     * Возращает строковое представление списка
+     * Вместо динам массив будет использовать StringBuilder
+     */
+    public String asString() {
+        // создаю объект стригбилдер , добавляю открыв [
+        StringBuilder sb = new StringBuilder().append('[');
+        ItemVer3 current = first; // текущий элемент односвяз списка в перем типа Item
+        while(current != null) { //цикл вайл пока текущ не равен нулл
+            // вместо записи дин массив будем записывать стринбилдер с методом append
+            sb.append(current.value) // current.value -> запрос поля valu, добавля ", "
+            if(current.next  != null) { // проверка на послед элемент, если пусто то уже запятая не нужна
+               sb.append(", ");
+            }
+            current = current.next;  // в карент след элем
+        }
+        // возраща
+        return sb.append(']').toString();
+
+    }
+
 }

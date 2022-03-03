@@ -14,9 +14,11 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09;
+package academy.devonline.java.home_structures_chapter09.LinkedListAsString;
 
+import academy.devonline.java.home_section001_classes.full_class_dyna_array.DynaArray;
 import academy.devonline.java.home_structures_chapter09.LinkedListToArray.LinkedListVer2;
+import academy.devonline.java.home_structures_chapter09.LinkedListToArray.ItemVer2;
 
 /**
  * @author devonline
@@ -25,7 +27,7 @@ import academy.devonline.java.home_structures_chapter09.LinkedListToArray.Linked
  *
  * #182
  * Практика: Метод LinkedList.asString
- * Необходимо создать метод asString() в классе HomeSolution03.
+ * Необходимо создать метод asString() в классе LinkedListVer3.
  *
  * Данный метод будет возвращать строковое представление объекта класса LinkedListв следующем формате:
  *
@@ -52,17 +54,6 @@ import academy.devonline.java.home_structures_chapter09.LinkedListToArray.Linked
  */
 class HomeSolution03 {
 
-    public static void main(String[] args) {
-        // создали объект нашего списка
-        LinkedListVer2 list = new LinkedListVer2();
-        for(int i = 1; i <= 3; i++) {
-            list.add(i);
-        }
 
-    }
-
-    void asString() {
-
-    }
 
 }
