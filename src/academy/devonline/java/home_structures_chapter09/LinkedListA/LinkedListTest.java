@@ -27,10 +27,11 @@ package academy.devonline.java.home_structures_chapter09.LinkedListA;
 public class LinkedListTest {
     public static void main(String[] args) {
         // создали объект нашего списка
-        LinkedList list = new LinkedList();
-        for (int i = 1; i <= 3; i++) {
-            list.add(i);
-        }
+
+
+        // цикл for, добавляю в лист метод add
+
+
 
         System.out.println();
     }

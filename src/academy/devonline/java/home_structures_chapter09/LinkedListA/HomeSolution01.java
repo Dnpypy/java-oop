@@ -34,6 +34,8 @@ package academy.devonline.java.home_structures_chapter09.LinkedListA;
  * В классе LinkedTest такая проверка будет:
  * Создаю объект , цикл фор с 1 до 3 элемнтов итерация
  * Заглушка (ничего не вывожу) prinln
+ *
+ * Создаю класс Item внутренним и переношу его в класс LinkedList и делаю его приватным.
  */
 public class HomeSolution01 {
 }

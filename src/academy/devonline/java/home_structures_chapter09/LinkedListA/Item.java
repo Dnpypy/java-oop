@@ -22,12 +22,15 @@ package academy.devonline.java.home_structures_chapter09.LinkedListA;
  */
 class Item {
 
-    int value;
-    Item next;
+    //значение
+
+
+    //ссылка на след элемент
+    //т.к. каждый элемент у нас представляется типом Item
+
+
 
     // с помощью конструктора можно сразу задать значение
     // public не имеет смысла класс не публичный
-    Item(int value) {
-        this.value = value;
-    }
+
 }

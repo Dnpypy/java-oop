@@ -14,30 +14,31 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09.LinkedListAsString;
+package academy.devonline.java.home_structures_chapter09.LinkedListClear;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
- *
- * #182
- *  * Практика: Метод LinkedList.asString
  */
-public class LinkedListTestVer3 {
+public class LinkedListTestVer2 {
     public static void main(String[] args) {
         // создали объект нашего списка
-        LinkedListVer3 list = new LinkedListVer3();
+        LinkedListVer2 list = new LinkedListVer2();
         for(int i = 1; i <= 3; i++) {
             list.add(i);
         }
 
-        System.out.println(Arrays.toString(list.toArray()));
         System.out.println(list.asString());
 
-        ArrayList <Integer> dd = new ArrayList<>();
+        list.clear();
+        System.out.println(list.asString());
+
+        for (int i = 1; i <= 10; i++) {
+            list.add(i);
+        }
+        System.out.println(list.asString());
     }
 
 

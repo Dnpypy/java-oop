@@ -21,6 +21,7 @@ package academy.devonline.java.structures;
  * @link http://devonline.academy/java
  */
 public class ItemVer2 {
+
     //значение
     int value;
 
