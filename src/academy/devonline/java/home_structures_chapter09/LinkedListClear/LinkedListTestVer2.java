@@ -39,6 +39,14 @@ public class LinkedListTestVer2 {
             list.add(i);
         }
         System.out.println(list.asString());
+
+        list.clear();
+        System.out.println(list.asString());
+
+        for (int i = 0; i <= 60; i++) {
+            list.add(i);
+        }
+        System.out.println(list.asString());
     }
 
 

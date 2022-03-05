@@ -65,18 +65,23 @@ public class LinkedListVer3 {
      */
     public String asString() {
         // создаю объект стригбилдер , добавляю открыв [
-
+        StringBuilder builder = new StringBuilder().append('[');
          // текущий элемент односвяз списка в перем типа Item
+        ItemVer3 current = first;
          //цикл вайл пока текущ не равен нулл
+        while(current != null) {
             // вместо записи дин массив будем записывать стринбилдер с методом append
+            builder.append(current.value);
              // current.value -> запрос поля value, добавля ", "
              // проверка на послед элемент, если пусто то уже запятая не нужна
-
+            if(current.next != null) {
+                builder.append(", ");
+            }
               // в карент след элем
-
+            current = current.next;
         }
-        // возращаем строк пред
-
+        // возращаем строк представление
+        return builder.append(']').toString();
     }
 
 }

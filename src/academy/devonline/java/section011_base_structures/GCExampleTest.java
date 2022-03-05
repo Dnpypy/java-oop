@@ -14,23 +14,28 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09.LinkedListA;
+package academy.devonline.java.section011_base_structures;
+
+import academy.devonline.java.home_structures_chapter09.LinkedListA.LinkedList;
+import academy.devonline.java.home_structures_chapter09.LinkedListAsString.LinkedListVer3;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
+ * #187
  */
-class Item {
+public class GCExampleTest {
+    public static void main(String[] args) {
+        String result = generate();
+        System.out.println(result);
+    }
 
-    //значение
-
-
-    //ссылка на след элемент
-    //т.к. каждый элемент у нас представляется типом Item
-
-
-
-    // с помощью конструктора можно сразу задать значение
-    // public не имеет смысла класс не публичный
-
+    private static String generate() {
+        LinkedListVer3 list = new LinkedListVer3();
+        for (int i = 1; i <= 3; i++) {
+            list.add(i);
+        }
+        return list.asString();
+    }
 }

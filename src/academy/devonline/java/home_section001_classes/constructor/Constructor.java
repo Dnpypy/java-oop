@@ -31,35 +31,5 @@ import java.util.Arrays;
 
 public class Constructor {
 
-    private double number = 100.0;
-    private String[] words = new String[15];
 
-    public double getNumber() {
-        return number;
-    }
-
-    public void setNumber(double number) {
-        this.number = number;
-    }
-
-    public String[] getWords() {
-        return words;
-    }
-
-    public void setWords(String[] words) {
-        this.words = words;
-    }
-
-    public Constructor(){
-        this(12);
-    }
-    public Constructor(int size) {
-        words = new String[size];
-    }
-
-    public static void main(String[] args) {
-        Constructor constructor1 = new Constructor();
-        System.out.println(Arrays.toString(constructor1.words));
-
-    }
 }

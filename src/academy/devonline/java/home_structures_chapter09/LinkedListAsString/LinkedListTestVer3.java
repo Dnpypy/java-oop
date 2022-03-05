@@ -37,7 +37,7 @@ public class LinkedListTestVer3 {
         System.out.println(Arrays.toString(list.toArray()));
         System.out.println(list.asString());
 
-        ArrayList <Integer> dd = new ArrayList<>();
+
     }
 
 
