@@ -36,7 +36,7 @@ package academy.devonline.java.home_structures_chapter09.LinkedListA;
  * Создаю объект , цикл фор с 1 до 3 элемнтов итерация
  * Заглушка (ничего не вывожу) prinln
  *
- * Изменяю класс Item внутренним и переношу его в класс LinkedList и делаю его приватным.
+ * Изменяю класс Item и делаю его внутренним(184 урок) и переношу его в класс LinkedList и делаю его приватным.
  */
 public class HomeSolution01 {
 }

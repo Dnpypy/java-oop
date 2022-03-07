@@ -37,8 +37,12 @@ import academy.devonline.java.structures.DynaArray;
 public class LinkedListVer2 {
     private ItemVer2 first;
 
-    private ItemVer2 last;
+    private ItemVer2 last; // скрытая ссылка на объект
 
+    /**
+     * метод изменяет состояние объекта
+     * @param value целое число
+     */
     public void add(int value) {
         ItemVer2 item = new ItemVer2(value);
         if (first == null) {
@@ -54,7 +58,7 @@ public class LinkedListVer2 {
      * Будем идти по списку с first элемента до элемента next у которого значение равняется null
      * next == null это означает посл элемент
      * будет возвращать массив целых чисел
-     *
+     * метод возращает работает с объектом first
      * @return int[] массив
      */
     public int[] toArray() {
@@ -68,13 +72,16 @@ public class LinkedListVer2 {
         return dynaArray.toArray();
     }
 
+    /**
+     * содержит логическую оишбку при которой возникает утечка памяти
+     */
     public void clear() {
         first = null;
     }
 
     /**
      * Если мы знает кол-во элементов и нам надо собрать строковое представление подойдет StringBuilder
-     * Возращает строковое представление списка
+     * метод возращает строковое представление списка, работает с объектом first
      * Вместо динам массив будет использовать StringBuilder
      */
     public String asString() {
