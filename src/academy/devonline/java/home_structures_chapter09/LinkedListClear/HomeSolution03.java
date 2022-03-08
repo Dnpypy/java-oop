@@ -14,29 +14,14 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
-
-import java.util.Arrays;
+package academy.devonline.java.home_structures_chapter09.LinkedListClear;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  *
- * #180 Метод LinkedList.toArray Home
+ * Написать метод clear
+ * Исправить утечку памяти в методе clear
  */
-public class LinkedListTestVer2 {
-    public static void main(String[] args) {
-        // создали объект нашего списка
-        LinkedListVer2 list = new LinkedListVer2();
-
-        // цикл с 1 до 3
-
-
-        // через объект обращаемся к методу toArray и выводим нам список
-
-    }
-
-
-
-
+public class HomeSolution03 {
 }

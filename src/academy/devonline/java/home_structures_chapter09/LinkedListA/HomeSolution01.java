@@ -23,7 +23,7 @@ package academy.devonline.java.home_structures_chapter09.LinkedListA;
  * Создание односвязного списка  №176
  * Создать 2 класса Item(не публичный), LinkedList  в пакете academy.devonline.java.home_structures_chapter09
  * LinkedListTest уже тест готов проверка там
- * В классе Item прописать 2 поля: значение типа int, след элемент типа Item и метод конструтокра для значения с
+ * В классе Item прописать 2 поля: значение типа int, след элемент типа Item и метод конструктора для значения с
  * одним параметром
  *
  * В классе LinkedList прописать 2 поля private типа Item, которые указывают на первый и последний элемент в списке

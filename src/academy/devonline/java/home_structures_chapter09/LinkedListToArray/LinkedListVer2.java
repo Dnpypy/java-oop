@@ -16,6 +16,7 @@
 
 package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
 
+import academy.devonline.java.home_structures_chapter09.LinkedListA.LinkedList;
 import academy.devonline.java.structures.DynaArray;
 
 /**
@@ -27,17 +28,29 @@ import academy.devonline.java.structures.DynaArray;
  */
 public class LinkedListVer2 {
 
-    private ItemVer2 first;
+    //У этого класса должно быть два поля, которые указывают на первый
+    // элемент списка и на последний
 
-    private ItemVer2 last;
+    /**
+     * добавляет элемент в списки
+     * т.к. метод add является методом класса LinkedList, то он имеет доступ к полям этого класса
+     *
+     * @param value целое число
+     */
+    void add(int value) {
+        //создаю объект элемента списка типа Item с одним аргументом конструктора
 
-    public void add(int value) {
-        ItemVer2 item = new ItemVer2(value);
-        if (first == null) {
-            first = last = item;
-        } else {
-            last.next = item;
-            last = item;
+        //тут нужна проверка если элементов нет в списке, т.е. список пустой
+        //по умолчани. внутр поля класс инициализируются null(если ничего не записано в них), задачи в пакете values
+        // тут проверка первого элемента!
+
+            // операция присваивания является правосторонней справо на лево
+            //сначала эта операция last = item, потом эта first = last
+
+        } {
+            // если в списке есть хотя бы один элемент, нам нужно обновить ссылку last
+             // напрямую к next не можем обратится, только через last
+
         }
     }
 
@@ -49,13 +62,13 @@ public class LinkedListVer2 {
      * @return int[] массив
      */
     public int[] toArray() {
-        DynaArray dynaArray = new DynaArray();// создаю объект DynaArray
-        ItemVer2 current = first;// текущий элемент односвяз списка присваиваем первому элементу (врем локал перем индикатор итерации)
-        while (current != null) { //цикл вайл пока текущ не равен нулл
-            dynaArray.add(current.value);// current.value -> запрос поля value (обновление индикатор итерации)
-            current = current.next;// текущ присваиваю текущ некст
+        // создаю объект DynaArray
+        // текущий элемент односвяз списка присваиваем первому элементу (врем локал перем индикатор итерации)
+        { //цикл вайл пока текущ не равен нулл
+            // current.value -> запрос поля value (обновление индикатор итерации)
+            // текущ присваиваю текущ некст
         }
         // как только вышли из while нужно элементы из дин массива преобразовать в стат массив
-        return dynaArray.toArray();
+
     }
 }

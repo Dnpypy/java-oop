@@ -1,0 +1,96 @@
+# 3 класс решение
+package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ *
+ * #180 Метод LinkedList.toArray Home
+ */
+public class ItemVer2 {
+    //Значение
+    int value;
+
+    //объявляется ссылка, она введет на след элемент
+    //т.к. каждый элемент у нас представляется типом ItemVer2
+    ItemVer2 next;
+
+
+    // С помощью конструктора можно сразу задать значение
+    // public у конструктора не имеет смысла класс не публичный
+    ItemVer2(int value) {
+        this.value = value;
+    }
+}
+package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
+
+import academy.devonline.java.structures.DynaArray;
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ * <p>
+ * #180 Метод LinkedList.toArray
+ * В классе LinkedListVer2 прописать метод toArray()
+ */
+public class LinkedListVer2 {
+
+    private ItemVer2 first;
+
+    private ItemVer2 last;
+
+    public void add(int value) {
+        ItemVer2 item = new ItemVer2(value);
+        if (first == null) {
+            first = last = item;
+        } else {
+            last.next = item;
+            last = item;
+        }
+    }
+
+    /**
+     * Так как незнаем количество элементов нам подойдет для этой задачи динамический массив DynaArray
+     * Будем идти по списку с first элемента до элемента next у которого значение равняется null
+     * next == null это означает посл элемент
+     * будет возвращать массив целых чисел
+     * @return int[] массив
+     */
+    public int[] toArray() {
+        DynaArray dynaArray = new DynaArray();// создаю объект DynaArray
+        ItemVer2 current = first;// текущий элемент односвяз списка присваиваем первому элементу (врем локал перем индикатор итерации)
+        while (current != null) { //цикл вайл пока текущ не равен нулл
+            dynaArray.add(current.value);// current.value -> запрос поля value (обновление индикатор итерации)
+            current = current.next;// текущ присваиваю текущ некст
+        }
+        // как только вышли из while нужно элементы из дин массива преобразовать в стат массив
+        return dynaArray.toArray();
+    }
+}
+
+
+package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
+
+import java.util.Arrays;
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ *
+ * #180 Метод LinkedList.toArray Home
+ */
+public class LinkedListTestVer2 {
+    public static void main(String[] args) {
+        // создали объект нашего списка
+        LinkedListVer2 list = new LinkedListVer2();
+        for(int i = 1; i <= 3; i++) {
+            list.add(i);
+        }
+
+        System.out.println(Arrays.toString(list.toArray()));
+    }
+
+
+
+
+}
