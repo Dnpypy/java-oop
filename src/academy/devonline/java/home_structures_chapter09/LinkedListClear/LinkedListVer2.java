@@ -17,6 +17,7 @@
 package academy.devonline.java.home_structures_chapter09.LinkedListClear;
 
 import academy.devonline.java.home_structures_chapter09.LinkedListAsString.ItemVer3;
+import academy.devonline.java.section011_base_structures.ObjectDynaArray;
 import academy.devonline.java.structures.DynaArray;
 
 
@@ -52,6 +53,7 @@ public class LinkedListVer2 {
             last = item;
         }
     }
+
 
     /**
      * Так как незнаем количество элементов нам подойдет для этой задачи динамический массив DynaArray

@@ -16,10 +16,6 @@
 
 package academy.devonline.java.home_structures_chapter09.LinkedListAsString;
 
-import academy.devonline.java.home_section001_classes.full_class_dyna_array.DynaArray;
-import academy.devonline.java.home_structures_chapter09.LinkedListToArray.LinkedListVer2;
-import academy.devonline.java.home_structures_chapter09.LinkedListToArray.ItemVer2;
-
 /**
  * @author devonline
  * @link http://devonline.academy/java
@@ -52,7 +48,7 @@ import academy.devonline.java.home_structures_chapter09.LinkedListToArray.ItemVe
  * System.out.println(list.asString());
  * Результат будет: []
  */
-class HomeSolution03 {
+class HomeSolution04 {
 
 
 

@@ -16,6 +16,8 @@
 
 package academy.devonline.java.home_structures_chapter09.LinkedListClear;
 
+import academy.devonline.java.section011_base_structures.ObjectDynaArray;
+
 import java.util.Arrays;
 
 /**
@@ -25,6 +27,7 @@ import java.util.Arrays;
 public class LinkedListTestVer2 {
     public static void main(String[] args) {
         // создали объект нашего списка
+        // добавление примитивных типов в наш список
         LinkedListVer2 list = new LinkedListVer2();
         for(int i = 1; i <= 3; i++) {
             list.add(i);
@@ -47,6 +50,9 @@ public class LinkedListTestVer2 {
             list.add(i);
         }
         System.out.println(list.asString());
+
+
+
     }
 
 
