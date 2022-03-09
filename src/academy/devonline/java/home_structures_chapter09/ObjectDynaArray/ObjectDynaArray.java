@@ -45,7 +45,11 @@ public class ObjectDynaArray {
      * И тогда эти объекты(new Element()) для сборщика мусора буду считаться мусором и он их удалит
      */
     public void clear() {
-       //....
+        for (int i = 0; i < count; i++) {
+            result[i] = null;
+        }
+        count = 0;
+
     }
 
     public static void main(String[] args) {

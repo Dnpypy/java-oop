@@ -30,9 +30,12 @@ public class LinkedListTestVer2 {
         LinkedListVer2 list = new LinkedListVer2();
 
         // цикл с 1 до 3
-
+        for (int i = 1; i <= 3; i++) {
+            list.add(i);
+        }
 
         // через объект обращаемся к методу toArray и выводим нам список
+        System.out.println(Arrays.toString(list.toArray()));
 
     }
 

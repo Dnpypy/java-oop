@@ -29,10 +29,14 @@ public class HomeArrayCopy {
 
         int[] bbb = {1, 2, 3};
         int[] arr = new int[bbb.length * 2]; // размер массива * 2
+        int[] arr2 = new int[bbb.length * 2]; // размер массива * 2
 
-
+        System.arraycopy(bbb, 0, arr, 0, 3);
+        System.arraycopy(bbb, 1, arr2, 0, 2);
         // 1 вариант [1, 2, 3, 0, 0, 0]
         // 2 вариант [2, 3, 0, 0, 0, 0]
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr2));
 
     }
 }

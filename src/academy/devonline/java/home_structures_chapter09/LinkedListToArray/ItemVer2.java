@@ -24,14 +24,17 @@ package academy.devonline.java.home_structures_chapter09.LinkedListToArray;
  */
 public class ItemVer2 {
     //Значение
-
+    int value;
 
     //объявляется ссылка, она введет на след элемент
     //т.к. каждый элемент у нас представляется типом ItemVer2
-
+    ItemVer2 next;
 
 
     // С помощью конструктора можно сразу задать значение
-    // public у конструктора не имеет смысла класс не публичный
+    // public у конструктора не имеет смысла, если класс не публичный
 
+    public ItemVer2(int value) {
+        this.value = value;
+    }
 }

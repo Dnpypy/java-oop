@@ -22,6 +22,7 @@ package academy.devonline.java.home_structures_chapter09.ObjectDynaArray;
  *
  *
  * Исправить утечку памяти, удалить неявные ссылки на объекты при вызове метода clear
+ * # 194 решение
  */
 public class HomeSolution05 {
 }

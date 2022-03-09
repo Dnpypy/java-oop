@@ -78,7 +78,8 @@ public class LinkedListVer2 {
      * содержит логическую оишбку при которой возникает утечка памяти
      */
     public void clear() {
-        //...
+        first = null;
+        last = null;
         // исправление утечки памяти
     }
 

@@ -22,6 +22,8 @@ package academy.devonline.java.home_structures_chapter09.LinkedListClear;
  *
  * Написать метод clear
  * Исправить утечку памяти в методе clear
+ *
+ * решение №192
  */
 public class HomeSolution03 {
 }
