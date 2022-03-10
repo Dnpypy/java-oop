@@ -1,3 +1,5 @@
+# 2 класса решение
+
 /*
  * Copyright 2022. http://devonline.academy
  *
@@ -23,20 +25,6 @@ import academy.devonline.java.structures.DynaArray;
  * @link http://devonline.academy/java
  * <p>
  * #196-197
- * * Необходимо реализовать метод boolean remove(int value),
- *  * который удаляет элемент из односвязного списка,
- *  * если данный элемент присутствует в этом списке.
- *  *
- *  * Если элемент был удален, то метод возвращает true, иначе - false!
- *  *
- *  *
- *  * [0, 1, 2, 3]
- *  * [0, 1, 2, 3] - После удаления элемента = 5
- *  * [1, 2, 3] - После удаления элемента = 0
- *  * [1, 3] - После удаления элемента = 2
- *  * [3]  - После удаления элемента = 1
- *  * []  - После удаления элемента = 3
- *  * [0] - После добавления двух элементов и удаления элемента = 1
  */
 public class LinkedList {
 
@@ -123,43 +111,41 @@ public class LinkedList {
      */
 
     public boolean remove(int value) {
-        //Создаю объект pair класса Pair ссылка ссылается на метод findPair туда передаю аргумент value
-
-        //если пара существует, тут проверка на null
-
+        Pair pair = findPair(value);
+        //если пара существует
+        if (pair != null) {
             // ---- логика удаление элемента -----
             // если мы нашли элемент который мы хотим удалить и
             // если поле карент равняется первому элементу и последнему
-
-                // чтобы удалить элемент, нужно просто обнулить его first and last
-
-
+            if (pair.current == first && pair.current == last) {
+                // чтобы удалить элемент, нужно просто обнулить его
+                first = null;
+                last = null;
                 // если мы хотим удалить первый элемент из списка,
                 // нам нужно сделать так, чтобы теперь первым элементоом был
                 // тот элемент который находится в поле next
-            } else if  {
-
+            } else if (pair.current == first) {
+                first = pair.current.next;
             } else {
                 // во всех остальных случаях запросить предыдущий элемент(previos)
                 // и в его поле next записать, то значение которое записано в текущем поле next
-
+                pair.previos.next = pair.current.next;
                 // но если удаляется последний элемент, то удаляется ссылка ласт
                 // если текущ элемент равняется последнему
-                if  {
-
+                if (pair.current == last) {
+                    last = pair.previos;
                 }
             }
-             // если удаление произошло
+            return true; // если удаление произошло
         }
-         // если нет
+        return false; // если нет
     }
 
     /**
      * @param value целое число
-     * @return null
+     * @return
      */
     private Pair findPair(int value) {
-        //создаем два объекта
         ItemVer2 previous = first;
         ItemVer2 current = first;
         // до тех пор пока наш текущ элемент не равен null
@@ -170,7 +156,7 @@ public class LinkedList {
                 return new Pair(previous, current);
             } else {
                 //иначе предыдущий становится карент
-                // а карент передаем ссылку карент некст
+                // а карент передаем ссылку некст
                 previous = current;
                 current = current.next;
             }
@@ -185,11 +171,13 @@ public class LinkedList {
      * previos - сохраняться ссылка на предыдущий элемент
      */
     private static class Pair {
-        //два поля private previos, current класса Itemver2
+        private ItemVer2 previos;
+        private ItemVer2 current;
 
-
-        //конструктор с двумя параметрами
-
+        private Pair(ItemVer2 previos, ItemVer2 current) {
+            this.previos = previos;
+            this.current = current;
+        }
     }
 
 
@@ -215,4 +203,80 @@ public class LinkedList {
 
 
 }
+
+/*
+ * Copyright 2022. http://devonline.academy
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ */
+
+package academy.devonline.java.home_structures_chapter09.LinkedList.remove;
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ * Необходимо реализовать метод boolean remove(int value),
+ * который удаляет элемент из односвязного списка,
+ * если данный элемент присутствует в этом списке.
+ *
+ * Если элемент был удален, то метод возвращает true, иначе - false!
+ *
+ *
+ * [0, 1, 2, 3]
+ * [0, 1, 2, 3] - После удаления элемента = 5
+ * [1, 2, 3] - После удаления элемента = 0
+ * [1, 3] - После удаления элемента = 2
+ * [3]  - После удаления элемента = 1
+ * []  - После удаления элемента = 3
+ * [0] - После добавления двух элементов и удаления элемента = 1
+ */
+public class LinkedListTest {
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.add(0);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        System.out.println(list.asString());
+
+        list.remove(5);
+        // [0, 1, 2, 3]
+        System.out.println(list.asString());
+
+        list.remove(0);
+        // [1, 2, 3]
+        System.out.println(list.asString());
+
+        list.remove(2);
+        // [1, 3]
+        System.out.println(list.asString());
+
+        list.remove(1);
+        // [3]
+        System.out.println(list.asString());
+
+        list.remove(3);
+        //[]
+        System.out.println(list.asString());
+        ///////////////////////////////////////////
+        list.add(0);
+        list.add(1);
+
+        list.remove(1);
+        // [0]
+        System.out.println(list.asString());
+    }
+}
+
 
