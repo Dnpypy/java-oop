@@ -178,8 +178,9 @@ public class DynaArray {
     /**
      * Если элемент был удален, то метод возвращает true, иначе - false!
      * method remove -
-     *              | - removeByIndex
-     *              | - indexOf
+     * | - removeByIndex
+     * | - indexOf
+     *
      * @param value целое число которое ищем
      * @return true или false ..
      */
@@ -188,15 +189,18 @@ public class DynaArray {
         // если элемент присутствует,
         // то переменная индекс будет хранить индекс элемента от 0 до значения count
         // если элемент отсутствует от индекс будет равен -1 присваиваем перем index
-
+        var index = indexOf(value);
         // если индекс не равен -1 удаляем индекс с помощью метода removeByIndex и true
-                 {
-
-                     // иначе false
-        }  {
-
+        if (index != -1) {
+            removeByIndex(index);
+            return true;
+            // иначе false
+        } else {
+            return false;
         }
     }
+
+
 
     /**
      * method remove -
@@ -208,17 +212,17 @@ public class DynaArray {
      * @param index принимает индекс элемента
      */
     // [0,1,2,3,4]  Пример index = 0
-            {
+    private void removeByIndex(int index) {
         // 0 < 5 - 1
-
-//            for (int i = index; i < count - 1; i++) {
-//                result[i] = result[i + 1];
-//            }
+        if (index < count - 1) {
+            //            for (int i = index; i < count - 1; i++) {
+            //                result[i] = result[i + 1];
+            //            }
             // (0,1,2,3,4) , 0 + 1 позиция начала нового массива, (1,2,3,4) массив-назначения, 0 начальным положением целевого массива,
             //это количество элементов, которые будут скопированы 5 - 1 - 0 = 4
-
-          }
-         // с 5 до 4
+            System.arraycopy(result, index + 1, result, index, count - 1 - index);
+        }
+        count--;// с 5 до 4
     }
 
     /**
@@ -227,10 +231,15 @@ public class DynaArray {
      * метод приватный для внутренного использования, реализация обычный линейный поиск for
      *
      * @param value целое число
-     * return индекс элемента или -1
+     *              return индекс элемента или -1
      */
-    {
-        ///....
+    private int indexOf(int value) {
+        for (int i = 0; i < count; i++) {
+            if (result[i] == value) {
+                return i;
+            }
+        }
+        return -1;
     }
 
 }
