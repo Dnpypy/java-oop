@@ -123,35 +123,34 @@ public class LinkedList {
      */
 
     public boolean remove(int value) {
-        //Создаю объект pair класса Pair ссылка ссылается на метод findPair туда передаю аргумент value
-
-        //если пара существует, тут проверка на null
-
+        Pair pair = findPair(value);
+        //если пара существует
+        if (pair != null) {
             // ---- логика удаление элемента -----
             // если мы нашли элемент который мы хотим удалить и
             // если поле карент равняется первому элементу и последнему
-
-                // чтобы удалить элемент, нужно просто обнулить его first and last
-
-
+            if (pair.current == first && pair.current == last) {
+                // чтобы удалить элемент, нужно просто обнулить его
+                first = null;
+                last = null;
                 // если мы хотим удалить первый элемент из списка,
                 // нам нужно сделать так, чтобы теперь первым элементоом был
                 // тот элемент который находится в поле next
-            } else if  {
-
+            } else if (pair.current == first) {
+                first = pair.current.next;
             } else {
                 // во всех остальных случаях запросить предыдущий элемент(previos)
                 // и в его поле next записать, то значение которое записано в текущем поле next
-
+                pair.previos.next = pair.current.next;
                 // но если удаляется последний элемент, то удаляется ссылка ласт
                 // если текущ элемент равняется последнему
-                if  {
-
+                if (pair.current == last) {
+                    last = pair.previos;
                 }
             }
-             // если удаление произошло
+            return true; // если удаление произошло
         }
-         // если нет
+        return false; // если нет
     }
 
     /**
@@ -186,10 +185,15 @@ public class LinkedList {
      */
     private static class Pair {
         //два поля private previos, current класса Itemver2
-
+        private ItemVer2 previos;
+        private ItemVer2 current;
 
         //конструктор с двумя параметрами
 
+        public Pair(ItemVer2 previos, ItemVer2 current) {
+            this.previos = previos;
+            this.current = current;
+        }
     }
 
 
