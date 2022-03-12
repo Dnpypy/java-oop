@@ -1,3 +1,5 @@
+# 1 класс решение
+
 /*
  * Copyright 2022. http://devonline.academy
  *
@@ -14,11 +16,39 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.inheritance;
+package academy.devonline.java.home_section021_inheritance_and_polymorphism;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
+ * #217 повтор
+ * В дочернем классе(наследнике) переопределить метод method1 и перегрузить
  */
-public class Test {
+public class OverrideVsOverload {
+    private static class Parent {
+
+        void method1() {
+
+        }
+    }
+
+    private static class Child extends Parent {
+
+        @Override
+        void method1() {
+
+        }
+
+        void method1(int value) {
+
+        }
+    }
+
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.method1();
+        //child.method1(12);
+    }
+
 }

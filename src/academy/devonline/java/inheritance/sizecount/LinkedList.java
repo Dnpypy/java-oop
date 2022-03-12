@@ -52,6 +52,7 @@ public class LinkedList extends BaseDataStructure{
         add(dynaArray.toArray());
     }
 
+
     public void add(LinkedList secondList) {
         if (secondList.count > 0) {
             if (first == null) {
@@ -88,6 +89,7 @@ public class LinkedList extends BaseDataStructure{
         return builder.append(']').toString();
     }
 
+    @Override
     public void clear() {
         first = null;
         last = null;

@@ -1,0 +1,23 @@
+#
+
+В классе BaseDataStructure
+
+  ***** 214 Устранение проблемы дублирование кода *****
+  Классы тесты не трогать!
+  В классах DynaArray, LinkedList удалить поле count, метод size, если есть.
+
+  В классе BaseDataStructure
+  Создать поле int count и модификатор который используется в классах наследниках и внутри текущего класса
+  Создать метод size который возвращает count
+
+  Классы DynaArray, LinkedList наследутся от класса BaseDataStructure
+
+
+  ***** 215 Переопределение метода *****
+
+  Метод clear из классов DynaArray, LinkedList перенести в класс BaseDataStructure
+  Выбрать какую реализацию именно перенести из класса DynaArray или LinkedList в класс BaseDataStructure
+  Оставшийся метод в классе DynaArray или LinkedList переопределить @
+
+
+

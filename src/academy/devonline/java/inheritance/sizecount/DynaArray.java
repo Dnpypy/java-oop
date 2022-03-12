@@ -33,6 +33,7 @@ public class DynaArray extends BaseDataStructure{
 
         private int[] result;
 
+
         public DynaArray() {
                 this(5);
         }
@@ -89,9 +90,7 @@ public class DynaArray extends BaseDataStructure{
                 return stringBuilder.append(']').toString();
         }
 
-        public void clear() {
-                count = 0;
-        }
+
 
         public boolean remove(int value) {
                 int index = indexOf(value);

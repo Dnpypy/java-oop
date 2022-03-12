@@ -14,32 +14,36 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.inheritance.sizecount;
+package academy.devonline.java.section021_inheritance_and_polymorphism;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
- *
- * protected модификатор используется в классах наследниках и внутри текущего класса
  */
-public class BaseDataStructure {
+public class OverrideVsOverload {
+    private static class Parent {
 
-    /**
-     * сохраняет количество элементов в заданной структуре данных
-     */
-    protected int count;
+        void method1() {
 
-    /**
-     *
-     * @return Возвращает количество элементов в данной структуре данных размер массива целые числа
-     */
-    public int size() {
-        return count;
+        }
     }
 
-    public void clear() {
-        count = 0;
+    private static class Child extends Parent {
+
+        @Override
+        void method1() {
+
+        }
+
+        void method1(int value) {
+
+        }
     }
 
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.method1();
+        //child.method1(12);
+    }
 
 }
