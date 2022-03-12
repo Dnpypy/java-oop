@@ -14,22 +14,30 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
+package academy.devonline.java.home_section021_inheritance_and_polymorphism;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
+ * #222
+ * Исправить код
+ * получить ссылку на мнимый объект родительского класса method1,
+ * вызвать метод из родительсого класса для этого используется ключевое слово...
+ *
+ * Далее в методе method3 вызывать метод method1 из этого же класса...
+ * (есть два способа),  применить оба способа
  */
 public class SuperMethod {
 
     private static class Parent {
 
         void method1() {
-
+            System.out.println("класс Родитель Parent method1\n");
         }
 
         void method2() {
-
+            System.out.println("класс Родитель Parent method2\n");
         }
     }
 
@@ -37,12 +45,14 @@ public class SuperMethod {
 
         @Override
         void method1() {
-            method1();  // получить ссылку на мнимый объект родительского класса
+            method1();    //...
             this.method1();
+            System.out.println("класс наследник Child method1\n");
         }
 
         void method3() {
-
+            //....
+            System.out.println("класс наследник Child method2\n");
         }
     }
 
