@@ -22,6 +22,7 @@ package academy.devonline.java.home_section021_inheritance_and_polymorphism;
  *
  * #217 повтор
  *   В дочернем классе(наследнике) переопределить метод method1 и перегрузить
+ *   Должно быть два метода method1!
  *
  * Если в дочернем классе присутствует метод с точно такой же сигнатурой как и в родительском классе,
  * то такой метод в дочернем классе переопределяет метод из родительского класса.
@@ -44,7 +45,7 @@ public class OverrideVsOverload {
 
     private static class Child extends Parent {
 
-
+        //...
     }
 
     public static void main(String[] args) {
