@@ -45,13 +45,13 @@ public class SuperMethod {
 
         @Override
         void method1() {
-            method1();    //...
-            this.method1();
+            super.method1();
             System.out.println("класс наследник Child method1\n");
         }
 
         void method3() {
-            //....
+            method1();
+            this.method1();
             System.out.println("класс наследник Child method2\n");
         }
     }

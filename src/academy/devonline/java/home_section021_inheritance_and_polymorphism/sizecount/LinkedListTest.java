@@ -14,16 +14,25 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.inheritance.sizecount;
+package academy.devonline.java.home_section021_inheritance_and_polymorphism.sizecount;
 
-class DynaArrayTest {
+import java.util.Arrays;
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
+public class LinkedListTest {
     public static void main(String[] args) {
+        LinkedList secondList = new LinkedList();
+        secondList.add(new int[]{4, 5, 6});
+
         LinkedList list = new LinkedList();
-        list.add(new int[]{0, 1, 2, 3});
-        DynaArray dynaArray = new DynaArray();
+        list.add(new int[]{1, 2, 3});
+        list.add(secondList);
+        //list.add(4);
 
-        dynaArray.add(list);
+        System.out.println(Arrays.toString(list.toArray()));
 
-        System.out.println(dynaArray.asString());
     }
 }

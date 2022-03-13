@@ -39,13 +39,21 @@ public class OverrideVsOverload {
     private static class Parent {
 
         void method1() {
-
+            System.out.println("Parent method1");
         }
     }
 
     private static class Child extends Parent {
 
-        //...
+        @Override
+        public void method1(){
+            System.out.println("Child method1");
+        }
+
+
+        public void method1(int value) {
+            value = value;
+        }
     }
 
     public static void main(String[] args) {

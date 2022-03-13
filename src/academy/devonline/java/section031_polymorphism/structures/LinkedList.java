@@ -14,23 +14,19 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.inheritance.sizecount;
+package academy.devonline.java.section031_polymorphism.structures;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
- * <p>
- *     Наследование
- * класс публичный любой разработчик имеет доступ к этому классу
- * #214 Устранение проблемы дублирование кода
  */
-
-
 public class LinkedList extends BaseDataStructure{
+
     private Item first;
 
     private Item last;
 
+    @Override
     public void add(int value) {
         Item item = new Item(value);
         if (first == null) {
@@ -42,17 +38,7 @@ public class LinkedList extends BaseDataStructure{
         count++;
     }
 
-    public void add(int[] array) {
-        for (int value : array) {
-            add(value);
-        }
-    }
-
-    public void add(DynaArray dynaArray) {
-        add(dynaArray.toArray());
-    }
-
-
+    @Override
     public void add(LinkedList secondList) {
         if (secondList.count > 0) {
             if (first == null) {
@@ -76,7 +62,8 @@ public class LinkedList extends BaseDataStructure{
         return result;
     }
 
-    public String asString() {
+    @Override
+    public String toString() {
         StringBuilder builder = new StringBuilder().append('[');
         Item current = first;
         while (current != null) {
@@ -93,7 +80,7 @@ public class LinkedList extends BaseDataStructure{
     public void clear() {
         first = null;
         last = null;
-        count = 0;
+        super.clear();
     }
 
     public boolean remove(int value) {

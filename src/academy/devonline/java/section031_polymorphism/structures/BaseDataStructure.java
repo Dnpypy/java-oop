@@ -14,25 +14,36 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.inheritance.sizecount;
-
-import java.util.Arrays;
+package academy.devonline.java.section031_polymorphism.structures;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class LinkedListTest {
-    public static void main(String[] args) {
-        LinkedList secondList = new LinkedList();
-        secondList.add(new int[]{4, 5, 6});
+public class BaseDataStructure {
+    protected int count;
 
-        LinkedList list = new LinkedList();
-        list.add(new int[]{1, 2, 3});
-        list.add(secondList);
-        //list.add(4);
+    public abstract void add(int value);
 
-        System.out.println(Arrays.toString(list.toArray()));
+    public void add(int[] array) {
+        for (int value : array) {
+            add(value);
+        }
+    }
 
+    public void add(DynaArray dynaArray) {
+        add(dynaArray.toArray());
+    }
+
+    public void add(LinkedList list) {
+        add(list.toArray());
+    }
+
+    public final int size() {
+        return count;
+    }
+
+    public void clear() {
+        count = 0;
     }
 }

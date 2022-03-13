@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.inheritance.sizecount;
+package academy.devonline.java.home_section021_inheritance_and_polymorphism.sizecount;
 
 import java.util.Arrays;
 

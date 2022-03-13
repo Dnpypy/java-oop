@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.inheritance.sizecount;
+package academy.devonline.java.home_section021_inheritance_and_polymorphism.sizecount;
 
 /**
  * @author devonline
@@ -33,13 +33,15 @@ public class BaseDataStructure {
      *
      * @return Возвращает количество элементов в данной структуре данных размер массива целые числа
      */
-    public int size() {
-        return count;
-    }
+     public int size() {
+         return count;
+     }
 
+    /**
+     * Обнуление перем count результат []
+     */
     public void clear() {
         count = 0;
     }
-
 
 }
