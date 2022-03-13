@@ -14,11 +14,21 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section031_polymorphism;
+package academy.devonline.java.section031_polymorphism;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ * 253
  */
-public class Test {
+public class InstanceOfAbstractClass {
+    public static void main(String[] args) {
+        /*Example example = new Example();
+        example.doSomething();*/
+    }
+
+    private static abstract class Example {
+
+        abstract void doSomething();
+    }
 }
