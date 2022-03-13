@@ -14,13 +14,14 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.section031_polymorphism.structures;
+package academy.devonline.java.home_section031_polymorphism.structures252;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
+ *
  */
-public class BaseDataStructure {
+public abstract class BaseDataStructure {
     protected int count;
 
     public abstract void add(int value);

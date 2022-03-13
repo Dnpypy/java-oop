@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.section031_polymorphism.structures;
+package academy.devonline.java.home_section031_polymorphism.structures252;
 
 import java.util.Arrays;
 
@@ -22,7 +22,7 @@ import java.util.Arrays;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class DynaArray extends BaseDataStructure{
+public class DynaArray extends BaseDataStructure {
     private int[] result;
 
     public DynaArray() {

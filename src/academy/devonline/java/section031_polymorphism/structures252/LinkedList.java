@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.section031_polymorphism.structures;
+package academy.devonline.java.section031_polymorphism.structures252;
 
 /**
  * @author devonline
