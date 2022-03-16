@@ -17,6 +17,7 @@
 package academy.devonline.java.home_section031_polymorphism.structures255;
 
 /**
+ * #255
  * Создать абстрактный класс DataStructure у которого все методы абстрактны
  * Копировать все методы из BaseDataStructure в класс DataStructure
  * B вместо тело метода, объявляем все методы делаем абстрактными в классе DataStructure
