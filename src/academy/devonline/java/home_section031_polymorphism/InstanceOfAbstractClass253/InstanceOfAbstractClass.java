@@ -21,20 +21,17 @@ package academy.devonline.java.home_section031_polymorphism.InstanceOfAbstractCl
  * @link http://devonline.academy/java
  * 253
  * Создать объект абстрактного класса
- * Почему не получается? Как это исправить?
+ * Почему не получается? Как это исправить? Дочерний класс? Или в объекте {}?
  */
 public class InstanceOfAbstractClass {
     public static void main(String[] args) {
-        Example example = new Example() {
-            @Override
-            void doSomething() {
-
-            }
-        };
+        Example example = new Example() ;
         example.doSomething();
 
 
     }
+
+    ///...
 
     private static abstract class Example {
 

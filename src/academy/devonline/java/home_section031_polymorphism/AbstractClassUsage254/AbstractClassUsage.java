@@ -19,14 +19,16 @@ package academy.devonline.java.home_section031_polymorphism.AbstractClassUsage25
 /**
  * @author devonline
  * @link http://devonline.academy/java
- *
- * Абстрактный класс можно использовать в качестве обычного родительского класса
+ * (!)Абстрактный класс ссылка -> на дочерний класс ();
+ * (!)Абстрактный класс можно использовать в качестве обычного родительского класса
+ * <p>
+ * Создать класс Child наследуемый от Example, в нем переопределить метод doSomething.
  * Создать ссылку на родит класс и присваивать ссылку на объект уже дочернего класса
  * alt+enter implements method переопределить метод
  */
 public class AbstractClassUsage {
     public static void main(String[] args) {
-        Example example = new Child();
+        Example example = //....
         example.doSomething();
     }
 

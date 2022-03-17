@@ -18,8 +18,10 @@ package academy.devonline.java.home_section031_polymorphism.interface257;
 
 /**
  * #257
- * Перенести class DataStructure из structures255 в interface256
+ * (!)У интерфейса все методы по умолчанию публичные и абстрактные
+ *
  * Создать интерфейс DataStructure
+ * Заполнить его методами описывающее поведение объектов классов DynaArray LinkedList
  *
  *
  * Если будет висеть ошибка над классами красным, проверяй все импорты во всех классах и интерфейсах
