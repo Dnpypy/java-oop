@@ -14,31 +14,22 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section031_polymorphism.InstanceOfAbstractClass253;
+package academy.devonline.java.home_section031_polymorphism.interface257;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
- * 253
- * Создать объект абстрактного класса
- * Почему не получается? Как это исправить?
  */
-public class InstanceOfAbstractClass {
+public class LinkedListTest {
     public static void main(String[] args) {
-        Example example = new Example() {
-            @Override
-            void doSomething() {
+        LinkedList secondList = new LinkedList();
+        secondList.add(new int[]{4, 5, 6});
 
-            }
-        };
-        example.doSomething();
+        LinkedList list = new LinkedList();
+        list.add(new int[]{1, 2, 3});
+        list.add(secondList);
+        //list.add(4);
 
-
+        System.out.println(list);
     }
-
-    private static abstract class Example {
-
-        abstract void doSomething();
-    }
-
 }

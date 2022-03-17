@@ -14,31 +14,20 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section031_polymorphism.InstanceOfAbstractClass253;
+package academy.devonline.java.home_section031_polymorphism.interface257;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
- * 253
- * Создать объект абстрактного класса
- * Почему не получается? Как это исправить?
  */
-public class InstanceOfAbstractClass {
+public class DynaArrayTest {
     public static void main(String[] args) {
-        Example example = new Example() {
-            @Override
-            void doSomething() {
+        LinkedList list = new LinkedList();
+        list.add(new int[]{0, 1, 2, 3});
+        DynaArray dynaArray = new DynaArray();
 
-            }
-        };
-        example.doSomething();
+        dynaArray.add(list);
 
-
+        System.out.println(dynaArray);
     }
-
-    private static abstract class Example {
-
-        abstract void doSomething();
-    }
-
 }

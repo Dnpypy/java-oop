@@ -14,31 +14,35 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section031_polymorphism.InstanceOfAbstractClass253;
+package academy.devonline.java.home_section031_polymorphism.abstract_interface257_2;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
- * 253
- * Создать объект абстрактного класса
- * Почему не получается? Как это исправить?
+ *
+ *
+ * Создать пример абстрактного класса и что туда может входить в комментариях
+ * Создать пример интерфейса и что туда может входить  в комментариях
+ *
+ * Пример абстрактного класса:
+ *
+ * public abstract class MyAbstractClass {
+ *
+ *     // ...
+ *     // ...
+ *     // ...
+ * }
+ * Пример интерфейса:
+ *
+ * public interface MyInterface {
+ *
+ *     // ...
+ *     // ...
+ *     // ...
+ *     // ...
+ *     // ...
+ * }
  */
-public class InstanceOfAbstractClass {
-    public static void main(String[] args) {
-        Example example = new Example() {
-            @Override
-            void doSomething() {
-
-            }
-        };
-        example.doSomething();
-
-
-    }
-
-    private static abstract class Example {
-
-        abstract void doSomething();
-    }
+public class Solution {
 
 }

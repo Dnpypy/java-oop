@@ -14,31 +14,14 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section031_polymorphism.InstanceOfAbstractClass253;
+package academy.devonline.java.home_section031_polymorphism.interface257;
 
 /**
- * @author devonline
- * @link http://devonline.academy/java
- * 253
- * Создать объект абстрактного класса
- * Почему не получается? Как это исправить?
+ * #257
+ * Перенести class DataStructure из structures255 в interface256
+ * Создать интерфейс DataStructure
+ *
  */
-public class InstanceOfAbstractClass {
-    public static void main(String[] args) {
-        Example example = new Example() {
-            @Override
-            void doSomething() {
 
-            }
-        };
-        example.doSomething();
-
-
-    }
-
-    private static abstract class Example {
-
-        abstract void doSomething();
-    }
-
+public class Solution {
 }

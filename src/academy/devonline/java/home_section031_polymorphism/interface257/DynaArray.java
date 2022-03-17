@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section031_polymorphism.structures255;
+package academy.devonline.java.home_section031_polymorphism.interface257;
 
 
 import java.util.Arrays;
@@ -24,7 +24,7 @@ import java.util.Arrays;
  * @link http://devonline.academy/java
  */
 
-public final class DynaArray extends BaseDataStructure{
+public class DynaArray extends BaseDataStructure {
     private int[] result;
 
 
@@ -54,7 +54,6 @@ public final class DynaArray extends BaseDataStructure{
         add(dynaArray.result, dynaArray.count);
     }
 
-
     private void add(int[] array, int length) {
         if (result.length - count < length) {
             grow(count + length);
@@ -69,7 +68,6 @@ public final class DynaArray extends BaseDataStructure{
         result = newArray;
     }
 
-    @Override
     public int[] toArray() {
         return Arrays.copyOf(result, count);
     }
@@ -86,7 +84,6 @@ public final class DynaArray extends BaseDataStructure{
         return stringBuilder.append(']').toString();
     }
 
-    @Override
     public boolean remove(int value) {
         int index = indexOf(value);
         if (index != -1) {
@@ -113,7 +110,6 @@ public final class DynaArray extends BaseDataStructure{
         return -1;
     }
 
-    @Override
     public boolean contains(int value) {
         return indexOf(value) != -1;
     }

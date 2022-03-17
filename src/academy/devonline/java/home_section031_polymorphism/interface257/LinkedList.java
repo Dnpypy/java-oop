@@ -14,15 +14,13 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section031_polymorphism.structures255;
-
-import academy.devonline.java.home_section031_polymorphism.interface257.DynaArray;
+package academy.devonline.java.home_section031_polymorphism.interface257;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public final class LinkedList extends BaseDataStructure{
+public class LinkedList extends BaseDataStructure {
 
     private Item first;
 
@@ -39,7 +37,6 @@ public final class LinkedList extends BaseDataStructure{
         }
         count++;
     }
-
 
     @Override
     public void add(LinkedList secondList) {

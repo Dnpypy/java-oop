@@ -21,19 +21,17 @@ package academy.devonline.java.home_section031_polymorphism.structures252;
  * @link http://devonline.academy/java
  * 252
  * Сделать метод add абстрактным и исправить ошибку, которая возникнет
- * Если у метода явна определяна сигнанутра, т.е. какой будет результат данного метода,
+ * Если у метода явна определяна сигнатура, т.е. какой будет результат данного метода,
  * и какие параметры он будет принимать, но при этом тело метода неизвестно,
  * такой метод нужно
  * определять со спецификатором abstract, который позволяет компилятору указать, что
  * данный метод абстрактный
  * Если в классе, есть хоть один метод абстрактный, сам класс является абстрактным.
  */
-public class BaseDataStructure {
+public abstract class BaseDataStructure {
     protected int count;
 
-    public void add(int value) {
-
-    }
+    abstract public void add(int value);
 
     public void add(int[] array) {
         for (int value : array) {
