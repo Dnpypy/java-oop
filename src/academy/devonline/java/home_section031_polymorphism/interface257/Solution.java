@@ -21,6 +21,8 @@ package academy.devonline.java.home_section031_polymorphism.interface257;
  * Перенести class DataStructure из structures255 в interface256
  * Создать интерфейс DataStructure
  *
+ *
+ * Если будет висеть ошибка над классами красным, проверяй все импорты во всех классах и интерфейсах
  */
 
 public class Solution {

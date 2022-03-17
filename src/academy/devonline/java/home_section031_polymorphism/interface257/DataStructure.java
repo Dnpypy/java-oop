@@ -17,9 +17,6 @@
 package academy.devonline.java.home_section031_polymorphism.interface257;
 
 
-import academy.devonline.java.home_section031_polymorphism.structures255.DynaArray;
-import academy.devonline.java.home_section031_polymorphism.structures255.LinkedList;
-
 /**
  * @author devonline
  * @link http://devonline.academy/java

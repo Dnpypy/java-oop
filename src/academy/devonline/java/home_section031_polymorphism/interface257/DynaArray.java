@@ -17,6 +17,8 @@
 package academy.devonline.java.home_section031_polymorphism.interface257;
 
 
+import academy.devonline.java.home_section031_polymorphism.structures255.LinkedList;
+
 import java.util.Arrays;
 
 /**
@@ -24,9 +26,9 @@ import java.util.Arrays;
  * @link http://devonline.academy/java
  */
 
-public class DynaArray extends BaseDataStructure {
-    private int[] result;
+public final class DynaArray extends BaseDataStructure {
 
+    private int[] result;
 
     public DynaArray() {
         this(5);
@@ -68,6 +70,7 @@ public class DynaArray extends BaseDataStructure {
         result = newArray;
     }
 
+    @Override
     public int[] toArray() {
         return Arrays.copyOf(result, count);
     }
@@ -84,6 +87,7 @@ public class DynaArray extends BaseDataStructure {
         return stringBuilder.append(']').toString();
     }
 
+    @Override
     public boolean remove(int value) {
         int index = indexOf(value);
         if (index != -1) {
@@ -110,6 +114,7 @@ public class DynaArray extends BaseDataStructure {
         return -1;
     }
 
+    @Override
     public boolean contains(int value) {
         return indexOf(value) != -1;
     }
