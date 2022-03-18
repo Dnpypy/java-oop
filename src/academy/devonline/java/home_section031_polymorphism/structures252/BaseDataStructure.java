@@ -20,12 +20,10 @@ package academy.devonline.java.home_section031_polymorphism.structures252;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class BaseDataStructure {
+abstract public class BaseDataStructure {
     protected int count;
 
-    public void add(int value) {
-
-    }
+    abstract public void add(int value);
 
     public void add(int[] array) {
         for (int value : array) {

@@ -28,7 +28,7 @@ package academy.devonline.java.home_section031_polymorphism.AbstractClassUsage25
  */
 public class AbstractClassUsage {
     public static void main(String[] args) {
-        Example example = //....
+        Example example = new Child();
         example.doSomething();
     }
 
@@ -37,10 +37,9 @@ public class AbstractClassUsage {
         abstract void doSomething();
     }
 
-    private static class Child extends Example {
-
+    private static class Child extends Example{
         @Override
-        void doSomething() {
+        void doSomething(){
 
         }
     }

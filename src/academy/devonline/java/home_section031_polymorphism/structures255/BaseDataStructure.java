@@ -16,10 +16,54 @@
 
 package academy.devonline.java.home_section031_polymorphism.structures255;
 
-public abstract class BaseDataStructure extends DataStructure{
+public class BaseDataStructure extends DataStructure{
 
     protected int count;
 
+    @Override
+    public void add(int value) {
+    }
 
+    @Override
+    public void add(int[] array) {
+        for (int value : array) {
+            add(value);
+        }
+    }
+
+    @Override
+    public void add(DynaArray dynaArray) {
+        add(dynaArray.toArray());
+    }
+
+    @Override
+    public void add(LinkedList list) {
+        add(list.toArray());
+    }
+
+    @Override
+    public int size() {
+        return count;
+    }
+
+    @Override
+    public int[] toArray() {
+        return new int[0];
+    }
+
+    @Override
+    public void clear() {
+        count = 0;
+    }
+
+    @Override
+    public boolean contains(int value) {
+        return false;
+    }
+
+    @Override
+    public boolean remove(int value) {
+        return false;
+    }
 
 }

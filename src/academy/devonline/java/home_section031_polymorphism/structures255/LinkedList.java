@@ -16,13 +16,11 @@
 
 package academy.devonline.java.home_section031_polymorphism.structures255;
 
-import academy.devonline.java.home_section031_polymorphism.interface257.DynaArray;
-
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public final class LinkedList extends BaseDataStructure{
+public class LinkedList extends BaseDataStructure{
 
     private Item first;
 

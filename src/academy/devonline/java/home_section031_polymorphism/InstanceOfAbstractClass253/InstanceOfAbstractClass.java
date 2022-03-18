@@ -25,16 +25,20 @@ package academy.devonline.java.home_section031_polymorphism.InstanceOfAbstractCl
  */
 public class InstanceOfAbstractClass {
     public static void main(String[] args) {
-        Example example = new Example() ;
+        Example example = new Child();
         example.doSomething();
 
 
     }
 
-    ///...
+    private static class Child extends Example{
+        @Override
+        void doSomething() {
+
+        }
+    }
 
     private static abstract class Example {
-
         abstract void doSomething();
     }
 

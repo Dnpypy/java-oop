@@ -14,14 +14,29 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section031_polymorphism.abstract_interface257_2;
+package academy.devonline.java.home_section031_polymorphism.structures255;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-abstract public class MyAbstractClass {
-    // поля и конструкторы
-    // абстрактные методы
-    // методы с реализацией
+public abstract class DataStructure {
+
+    abstract public void add(int value);
+
+    abstract public void add(int[] array);
+
+    abstract public void add(DynaArray dynaArray);
+
+    abstract public void add(LinkedList list);
+
+    abstract public int size();
+
+    abstract public int[] toArray();
+
+    abstract public void clear();
+
+    abstract public boolean contains(int value);
+
+    abstract public boolean remove(int value);
 }
