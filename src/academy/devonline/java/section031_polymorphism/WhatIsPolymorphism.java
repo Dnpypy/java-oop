@@ -44,7 +44,7 @@ public class WhatIsPolymorphism {
     }
 
     /**
-     * Логика формирования заказа
+     * Логика формирования заказа(оформление заказа)
      * @param dataStructure интерфейс
      */
     private static void createOrder(DataStructure dataStructure) {
