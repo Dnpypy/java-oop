@@ -20,17 +20,27 @@ package academy.devonline.java.section031_polymorphism;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public interface ArrayElementsProvider {
+public class GetClassUsage {
+    public static void main(String[] args) {
+        Object o = new Parent();
 
-    /**
-     *
-     * @return true если есть элементы для суммирования и false если нет
-     */
-    boolean hasMoreElements();
+        boolean result = o instanceof Child;
+        System.out.println(result);
+        System.out.println(o instanceof Child);
+        if (o instanceof Child) {
+            System.out.println("Child");
+        }
+    }
 
-    /**
-     *
-     * @return возвращает следующий элемент
-     */
-    int nextElement();
+    private static class GrandParent /*extends Object*/ {
+
+    }
+
+    private static class Parent extends GrandParent {
+
+    }
+
+    private static class Child extends Parent {
+
+    }
 }
