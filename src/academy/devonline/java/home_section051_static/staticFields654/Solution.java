@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package academy.devonline.java.home_section051_static.StaticFields654;
+package academy.devonline.java.home_section051_static.staticFields654;
 
 /**
  * @author devonline
