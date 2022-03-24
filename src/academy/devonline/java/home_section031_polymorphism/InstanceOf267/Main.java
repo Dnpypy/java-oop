@@ -19,18 +19,28 @@ package academy.devonline.java.home_section031_polymorphism.InstanceOf267;
 /**
  * @author devonline
  * @link http://devonline.academy/java
- *
- * СОздать класс Main в нем создать точку входа
- * и в нем создать 3 приватных статических класса GrandParent, Parent, Child
- * Child наследуется от Parent, Parent от GrandParent
- *
- * Создать ссылку o класса Object и создать объект Parent
- *
- * Проверить является ли ссылка o ссылкой на объект класса Child
- * Результат присвоить в булево переменную result
- *
- * Сделать проверку сделать  на объект Parent
- * через if(...) Вывезти если true sout "Parent"
  */
-public class Solution {
+public class Main {
+
+    public static void main(String[] args) {
+        Object o = new Parent();
+        boolean result = (o instanceof Child);
+        System.out.println(result);
+
+        if (o instanceof Parent) {
+            System.out.println("Parent");
+        }
+    }
+
+    private static class GrandParent /*extends Object*/{
+
+    }
+
+    private static class Parent extends GrandParent {
+
+    }
+
+    private static class Child extends Parent {
+
+    }
 }
