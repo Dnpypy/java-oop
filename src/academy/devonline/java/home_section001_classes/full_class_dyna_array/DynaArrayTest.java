@@ -15,6 +15,7 @@ public class DynaArrayTest {
         dynaArray.add(3);
         dynaArray.add(4);
         dynaArray.add(5);
+        System.out.println(dynaArray.getCount());
 
         dynaArray.add(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1});
 
