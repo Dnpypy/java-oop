@@ -34,6 +34,5 @@ public class StaticFields {
         System.out.println(staticFields1.value);
         System.out.println(staticFields2.value);
 
-
     }
 }
