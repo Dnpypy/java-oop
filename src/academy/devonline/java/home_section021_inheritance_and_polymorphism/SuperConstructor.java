@@ -23,6 +23,15 @@ package academy.devonline.java.home_section021_inheritance_and_polymorphism;
  * 229
  *
  * Прописать ключевое слово super() и вызвать конструкторы с параметром и без из родительского класса.
+ * Вывод :
+ * Parent.<init>()
+ * Child.<init>()
+ * или
+ * Parent.<init>(int)
+ * Child.<init>()
+ * или
+ * Parent.<init>(boolean)
+ * Child.<init>()
  */
 public class SuperConstructor {
 
