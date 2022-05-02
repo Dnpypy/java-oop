@@ -20,7 +20,7 @@ package academy.devonline.java.home_section021_inheritance_and_polymorphism;
  * @author devonline
  * @link http://devonline.academy/java
  *
- * #217 повтор
+ * #218 повтор
  *   В дочернем классе(наследнике) переопределить метод method1 и перегрузить
  *   Должно быть два метода method1!
  *
@@ -59,7 +59,8 @@ public class OverrideVsOverload {
     public static void main(String[] args) {
         Child child = new Child();
         child.method1();
-        //child.method1(12);
+        child.method1(12);
+
     }
 
 }
