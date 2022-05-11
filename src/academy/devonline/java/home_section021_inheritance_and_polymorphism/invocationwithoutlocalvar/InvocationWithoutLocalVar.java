@@ -32,8 +32,12 @@ public class InvocationWithoutLocalVar {
 
     public static void main(String[] args) {
         //1.
-
+        InvocationWithoutLocalVar invocationWithoutLocalVar = new InvocationWithoutLocalVar();
+        System.out.println(invocationWithoutLocalVar.field);
+        invocationWithoutLocalVar.doSomething();
 
         //2.
+        System.out.println(new InvocationWithoutLocalVar().field);
+        new InvocationWithoutLocalVar().doSomething();
     }
 }
