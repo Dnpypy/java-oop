@@ -16,24 +16,22 @@
 
 package academy.devonline.java.home_structures_chapter09.LinkedListsize;
 
-
-
 /**
  * @author devonline
  * @link http://devonline.academy/java
- *
- * 198-200
- *
- *
- *
+ * 200 Эффективная реализация
+ * работа с переменной count счетчиком содержащий количество элементов
+ * - //храняться в текущем моменте линкед листа (поле)
+ * - // обязательно нужно увеличить счетчик count при добавлении элемента
+ * - // обнулить переменную count при удалении всех элементов
+ * - // также уменьшаем при удалении одного элемента
+ * - // и возврат количество элементов
  */
-public class LinkedList {
+public class LinkedListBegin {
 
     private Item first;
 
     private Item last;
-
-    private int count; //храняться в текущем моменте линкед листа
 
     public void add(int value) {
         Item item = new Item(value);
@@ -43,7 +41,6 @@ public class LinkedList {
             last.next = item;
             last = item;
         }
-        count++; // обязательно нужно увеличить счетчик count
     }
 
     public int[] toArray() {
@@ -72,7 +69,6 @@ public class LinkedList {
     public void clear() {
         first = null;
         last = null;
-        count = 0; // обнулить переменную count при удалении всех элементов
     }
 
     public boolean remove(int value) {
@@ -89,7 +85,6 @@ public class LinkedList {
                     last = pair.previous;
                 }
             }
-            count--; // также уменьшаем при удалении одного элемента
             return true;
         }
         return false;
@@ -110,6 +105,12 @@ public class LinkedList {
     }
 
     public int size() {
+        Item current = first;
+        int count = 0;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
         return count;
     }
 

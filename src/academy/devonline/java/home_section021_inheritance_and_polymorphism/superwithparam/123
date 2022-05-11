@@ -1,0 +1,26 @@
+private static class GrandParent {
+
+        int value;
+
+        public GrandParent(int value) {
+            this.value = value;
+        }
+    }
+
+    private static class Parent extends GrandParent {
+
+        public Parent(int value) {
+            super(value);
+        }
+    }
+
+    private static class Child extends Parent {
+
+        public Child(int value) {
+            super(value);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Child(12).value);
+    }

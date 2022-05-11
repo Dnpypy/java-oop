@@ -1,0 +1,8 @@
+// 1)
+        InvocationWithoutLocalVar object = new InvocationWithoutLocalVar();
+        System.out.println(object.field);
+        object.doSomething();
+
+        // 2)
+        System.out.println(new InvocationWithoutLocalVar().field);
+        new InvocationWithoutLocalVar().doSomething();
